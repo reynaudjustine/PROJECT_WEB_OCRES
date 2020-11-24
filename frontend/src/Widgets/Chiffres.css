@@ -1,0 +1,55 @@
+.table {
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 80%;
+    height: 65%;
+    background-color: grey;
+}
+
+.table #ul1
+{
+    padding-left: 0.3em;
+    margin: 0em 0em 0em 0em;
+    display: flex;
+    width: 100%;
+    background-color: #E90570;
+    height: 3em;
+    text-align: left;
+}
+
+.table #ul2
+{
+    padding-left: 0.3em;
+    margin: 0em 0em 0em 0em;
+    display: flex;
+    width: 100%;
+    background-color: #696969;
+    height: 3em;
+    text-align: left;
+}
+
+.table #ul3
+{
+    padding-left: 0.3em;
+    margin: 0em 0em 0em 0em;
+    display: flex;
+    width: 100%;
+    background-color:grey;
+    height: 3em;
+    text-align: left;
+}
+
+.table #ul4
+{
+    padding-left: 0.3em;
+    margin: 0em 0em 0em 0em;
+    display: flex;
+    width: 100%;
+    background-color: #A0A0A0;
+    height: 3em;
+    text-align: left;
+}
+
+
+  
+  
