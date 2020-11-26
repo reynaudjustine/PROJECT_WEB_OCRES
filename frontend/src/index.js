@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import Dashboard from './Dashboard'
+import Formulaire from './Formulaire'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<Dashboard />, document.getElementById('root'));
+/*ReactDOM.render(<Formulaire />, document.getElementById('root'));*/
 //ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

@@ -1,6 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+/*import {BrowseRouter as Router, Route, Link, Switch} from "react-router-dom";
+import Dashboard from './Dashboard'
+import Formulaire from './Formulaire'*/
 
 function App() {
   return (
@@ -22,5 +25,18 @@ function App() {
     </div>
   );
 }
+
+/*class App extends Component {
+  render(){
+    return(
+      <Router>
+        <switch>
+          <Route exact path="/" component={Dashboard} />
+          <Route path="/Formulaire" component={Formulaire} />
+        </switch>
+      </Router>
+    );
+  }
+}*/
 
 export default App;

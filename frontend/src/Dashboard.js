@@ -22,11 +22,11 @@ class Dashboard extends Component {
                         
                         <div id="bande"> 
                             <button class="btn btn-outline-secondary btn-sm" id="boutons">
-                                Dashboard
+                                <a href="Dashboard.js">Dashboard</a>
                             </button>
 
                             <button class="btn btn-outline-secondary btn-sm" id="boutons">
-                                Formulaire
+                                <a href="Formulaire.js">Formulaire</a>
                             </button>
                         </div>
                     </div>
@@ -64,6 +64,8 @@ class Dashboard extends Component {
         )
     }
 }
+
+
 
 export default Dashboard;
 

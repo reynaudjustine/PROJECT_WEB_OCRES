@@ -5,43 +5,35 @@ import {
 
 const data = [
   {
-    name: 'Page A', uv: 4000, pv: 2400, amt: 2400,
+    Marque: 'Nike', NB_Ventes: 4000,
   },
   {
-    name: 'Page B', uv: 3000, pv: 1398, amt: 2210,
+    Marque: 'Adidas', NB_Ventes: 3000, 
   },
   {
-    name: 'Page C', uv: 2000, pv: 9800, amt: 2290,
+    Marque: 'Vans', NB_Ventes: 2000,
   },
   {
-    name: 'Page D', uv: 2780, pv: 3908, amt: 2000,
+    Marque: 'Puma', NB_Ventes: 2780,
   },
   {
-    name: 'Page E', uv: 1890, pv: 4800, amt: 2181,
-  },
-  {
-    name: 'Page F', uv: 2390, pv: 3800, amt: 2500,
-  },
-  {
-    name: 'Page G', uv: 3490, pv: 4300, amt: 2100,
+    Marque: 'Converse', NB_Ventes: 1890,
   },
 ];
 
 
 const getIntroOfPage = (label) => {
-  if (label === 'Page A') {
-    return "Page A is about men's clothing";
-  } if (label === 'Page B') {
-    return "Page B is about women's dress";
-  } if (label === 'Page C') {
-    return "Page C is about women's bag";
-  } if (label === 'Page D') {
-    return 'Page D is about household goods';
-  } if (label === 'Page E') {
-    return 'Page E is about food';
-  } if (label === 'Page F') {
-    return 'Page F is about baby food';
-  }
+  if (label === 'Nike') {
+    return "";
+  } if (label === 'Adidas') {
+    return "";
+  } if (label === 'Vans') {
+    return "";
+  } if (label === 'Puma') {
+    return '';
+  } if (label === 'Converse') {
+    return '';
+  }  
 };
 
 const CustomTooltip = ({ active, payload, label }) => {
@@ -63,21 +55,24 @@ export default class Example extends PureComponent {
 
   render() {
     return (
-      <BarChart
-        width={400}
-        height={300}
-        data={data}
-        margin={{
-          top: 5, right: 30, left: 20, bottom: 5,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip content={<CustomTooltip />} />
-        <Legend />
-        <Bar dataKey="pv" barSize={20} fill="#E90570" />
-      </BarChart>
+      <div>
+        <BarChart
+          width={400}
+          height={300}
+          data={data}
+          margin={{
+            top: 5, right: 30, left: 20, bottom: 5,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="Marque" />
+          <YAxis />
+          <Tooltip content={<CustomTooltip />} />
+          <Legend />
+          <Bar dataKey="NB_Ventes" barSize={20} fill="#E90570" />
+        </BarChart>
+        <p><strong>Nombre de ventes par catégorie</strong></p>
+      </div>
     );
   }
 }

@@ -6,22 +6,19 @@ import {
 
 const data = [
   {
-    subject: 'Math', A: 120, B: 110, fullMark: 150,
+    subject: 'Sneakers', Juscar: 120, Asos: 110, fullMark: 150,
   },
   {
-    subject: 'Chinese', A: 98, B: 130, fullMark: 150,
+    subject: 'Sport', Juscar: 98, Asos: 130, fullMark: 150,
   },
   {
-    subject: 'English', A: 86, B: 130, fullMark: 150,
+    subject: 'Ville', Juscar: 86, Asos: 130, fullMark: 150,
   },
   {
-    subject: 'Geography', A: 99, B: 100, fullMark: 150,
+    subject: 'Bottines', Juscar: 99, Asos: 100, fullMark: 150,
   },
   {
-    subject: 'Physics', A: 85, B: 90, fullMark: 150,
-  },
-  {
-    subject: 'History', A: 65, B: 85, fullMark: 150,
+    subject: 'Plage', Juscar: 85, Asos: 90, fullMark: 150,
   },
 ];
 
@@ -30,14 +27,17 @@ export default class Example extends PureComponent {
 
   render() {
     return (
-      <RadarChart cx={200} cy={150} outerRadius={150} width={400} height={400} data={data}>
-        <PolarGrid />
-        <PolarAngleAxis dataKey="subject" />
-        <PolarRadiusAxis angle={30} domain={[0, 150]} />
-        <Radar name="Mike" dataKey="A" stroke="#E90570" fill="#E90570" fillOpacity={0.6} />
-        <Radar name="Lily" dataKey="B" stroke="#696969" fill="#696969" fillOpacity={0.6} />
-        <Legend />
-      </RadarChart>
+      <div>
+        <RadarChart cx={200} cy={150} outerRadius={150} width={400} height={400} data={data}>
+          <PolarGrid />
+          <PolarAngleAxis dataKey="subject" />
+          <PolarRadiusAxis angle={30} domain={[0, 150]} />
+          <Radar name="Juscar" dataKey="Juscar" stroke="#E90570" fill="#E90570" fillOpacity={0.6} />
+          <Radar name="Asos" dataKey="Asos" stroke="#696969" fill="#696969" fillOpacity={0.6} />
+          <Legend />
+        </RadarChart>
+        <p><strong>Part de marché</strong></p>
+      </div>
     );
   }
 }

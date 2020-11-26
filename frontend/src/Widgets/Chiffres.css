@@ -1,9 +1,18 @@
+#container_tab{
+    text-align: center;
+}
+
+#container_tab2{
+    text-align: center;
+}
+
 .table {
     margin-top: 5%;
     margin-left: 5%;
-    width: 80%;
+    width: 90%;
     height: 65%;
     background-color: grey;
+    text-align: center;
 }
 
 .table #ul1
@@ -13,6 +22,7 @@
     display: flex;
     width: 100%;
     background-color: #E90570;
+    border-color: #E90570;
     height: 3em;
     text-align: left;
 }
@@ -24,6 +34,7 @@
     display: flex;
     width: 100%;
     background-color: #696969;
+    border-color: #696969;
     height: 3em;
     text-align: left;
 }
@@ -35,6 +46,7 @@
     display: flex;
     width: 100%;
     background-color:grey;
+    border-color: grey;
     height: 3em;
     text-align: left;
 }
@@ -46,6 +58,7 @@
     display: flex;
     width: 100%;
     background-color: #A0A0A0;
+    border-color:  #A0A0A0;
     height: 3em;
     text-align: left;
 }
