@@ -1,11 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
+import Routes from './Routes';
+import "./Dashboard.css"
+/*import logo from './logo.svg';
+import './App.css';*/
 /*import {BrowseRouter as Router, Route, Link, Switch} from "react-router-dom";
 import Dashboard from './Dashboard'
 import Formulaire from './Formulaire'*/
 
-function App() {
+/*function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -24,19 +27,48 @@ function App() {
       </header>
     </div>
   );
-}
+}*/
 
-/*class App extends Component {
+class App extends Component {
   render(){
     return(
-      <Router>
-        <switch>
-          <Route exact path="/" component={Dashboard} />
-          <Route path="/Formulaire" component={Formulaire} />
-        </switch>
-      </Router>
+      <div>
+        <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+                    <div id="nav">
+                        <div id="title"><h1>Dashboard</h1></div>
+                        
+                        <div id="bande"> 
+                            <button class="btn btn-outline-secondary btn-sm" id="boutons">
+                              <Link to="/">Dashboard</Link>
+                            </button>
+
+                            <button class="btn btn-outline-secondary btn-sm" id="boutons">
+                              <Link to="/formulaire">Formulaire</Link>
+                            </button>
+                        </div>
+                    </div>
+                </nav>
+          {/*<nav>
+            <ol>
+              <li><Link to="/">Dashboard</Link></li>
+              <li><Link to="/formulaire">Formulaire</Link></li>
+            </ol>
+          </nav>*/}
+        </header>
+        <Routes/>
+        {/*<footer id="footer">
+          <p>Designed and developed by Justine and Oscar</p>
+        </footer>*/}
+        <footer class="page-footer" id="footer">
+          <div class="container">
+              
+              <div class="footer-copyright text-center">&copy; 2020 Copyright | Droits d'auteur: Oscar Marze et Justine Reynaud</div>
+          </div>
+	      </footer>
+     </div>
     );
   }
-}*/
+}
 
 export default App;

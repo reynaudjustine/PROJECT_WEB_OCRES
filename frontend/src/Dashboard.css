@@ -7,7 +7,6 @@ body{
 }
 
 #nav{
-
     background-color: white;
     display: flex;
     width: 95%;
@@ -64,4 +63,13 @@ body{
     margin-top: 3%;
     margin-bottom: 3%;
     text-align: center;
+}
+
+
+#footer{
+    color:black;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #c8c8c8;
 }

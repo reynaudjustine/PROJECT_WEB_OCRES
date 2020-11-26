@@ -1,0 +1,83 @@
+#test{
+    width: 100%;
+    background-color: red;
+}
+
+#container_test{
+    text-align: center;
+    width:70%;
+    background-color: blue;
+}
+
+#petit-cont{
+    width: 100%;
+    background-color: chartreuse;
+}
+
+.container_center2{
+	width: 100%;
+	float:left;
+    height: 47em;
+	text-align: center;
+
+}
+
+.container_center2 h1{
+    color: grey;
+}
+.container_center2 label{
+    color: grey;
+}
+
+#test_form{
+    background-color: royalblue;
+    margin-top: 5%;
+    width: 80%;
+    margin-right: 15%;
+    margin-left: 10%;
+}
+
+#table_test{
+    width: 100%;
+    background-color:lavenderblush;
+   
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#id{
+    text-align: right;
+}
+
+#Fleche{
+    text-align: center;
+}
+
+#arrow{
+	
+	left: 57%;
+	animation-name: deplacement;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes deplacement{
+	from{ transform: translateY(0); }
+	to{transform: translateY(50px);}
+}
+/*
+.nom {
+    font-size: 34px;
+  text-shadow: 2px 2px 5px #ffb7b2;
+}*/
+
+
+
+/*.table{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+} */
