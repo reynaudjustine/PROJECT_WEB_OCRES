@@ -6,41 +6,7 @@ body{
     background-image: url(Fond.png);
 }
 
-#nav{
-    background-color: white;
-    display: flex;
-    width: 95%;
-    margin : auto;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	border-radius: 5px;
-}
 
-
-#title{
-    
-    
-    margin: 0em 0em 0em 1em;
-}
-
-#title h1{
-    color: grey;
-}
-
-#bande{
-    margin: 0em 1em 0em 0em;
-    padding-left: 1em;
-    height:3em;
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-}
-#bande #boutons{
-    margin-left: 3em;
-    margin-top: 1em;
-    text-align: center;
-}
 
 
 #petit_container1{
@@ -73,3 +39,38 @@ body{
     bottom: 0;
     background-color: #c8c8c8;
 }
+
+
+
+#nav{
+    background-color: white;
+    display: flex;
+    width: 100%;
+    margin : auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+  }
+  
+  
+  #title{
+    margin: 0em 0em 0em 0em;
+  }
+  
+  #title h1{
+    color: grey;
+  }
+  
+  #bande{
+    margin: 0em 1em 0em 0em;
+    height:3em;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  } 
+  #bande #boutons{
+    margin-left: 3em;
+    margin-top: 1em;
+    text-align: center;
+  }

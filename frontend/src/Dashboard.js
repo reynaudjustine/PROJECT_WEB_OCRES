@@ -17,24 +17,24 @@ class Dashboard extends Component {
             <div className="Container" id="container" >
              
                 <div className="row">
-                    <div class="col-md" id="petit_container1"> 
+                    <div class=" col-sm-6 col-lg-4  " id="petit_container1"> 
                         <TestWidget/>
                     </div>
-                    <div class="col-md" id="petit_container2">
+                    <div class=" col-sm-6 col-lg-4 " id="petit_container2">
                         <BarChart/>
                     </div>
-                    <div class="col-md" id="petit_container3">
+                    <div class=" col-sm-6 col-lg-4 " id="petit_container3">
                         <Chiffres chiffre/> 
                     </div>
 
 
-                    <div class="col-md" id="petit_container1"> 
+                    <div class=" col-sm-6 col-lg-4 " id="petit_container1"> 
                         <AreaChart/>
                     </div>
-                    <div class="col-md" id="petit_container2">
+                    <div class=" col-sm-6 col-lg-4" id="petit_container2">
                         <RadarChart/>
                     </div>
-                    <div class="col-md" id="petit_container3">
+                    <div class=" col-sm-6 col-lg-4" id="petit_container3">
                         <PieChart/>
                     </div>
 

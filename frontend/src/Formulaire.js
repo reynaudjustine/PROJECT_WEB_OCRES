@@ -11,7 +11,7 @@ class Formulaire extends Component {
         return (
         <div className="container_center2" id="section">
             <h1>Nouvelle Vente</h1>
-            <label><strong>Saisir les détails de la nouvelle vente</strong></label>
+            <label id="sous-titre"><strong>Saisir les détails de la nouvelle vente</strong></label>
             <br></br>
             <div id="Fleche">
                 <img src={fleche} height="100" id="arrow"/>
@@ -19,15 +19,15 @@ class Formulaire extends Component {
  
             <form id="test_form">
                 <table id="table_test">
-                    <tr>
+                    <tr id="tr1">
                         <td>Modèle :</td>
                         <td><input type="text" name="nom"></input></td>
                     </tr>
-                    <tr>
+                    <tr  id="tr2">
                         <td>Prix :</td>
                         <td><input type="text" name="email"></input></td>
                     </tr>
-                    <tr>
+                    <tr  id="tr3">
                         <td>Genre :</td>
                         <td id="radio_left">
                         <div class="form-check">
@@ -50,7 +50,7 @@ class Formulaire extends Component {
                             </div>
                         </td>
                     </tr>
-                    <tr>         
+                    <tr id="tr4">         
                         <td>Catégorie :</td>
                         <td>
                             <div class="form-group">
@@ -64,11 +64,11 @@ class Formulaire extends Component {
                             </div>
                         </td>
                     </tr>
-                    <tr>
+                    <tr id="tr5">
                         <td>Marque :</td>
                         <td><textarea id="message" name="marque"></textarea></td>
                     </tr>
-                    <tr>
+                    <tr id="tr6">
                         <td>Pays de vente :</td>
                         <td>
                             <div class="form-group">
@@ -77,6 +77,16 @@ class Formulaire extends Component {
                                     <option>Italie</option>
                                     <option>Allemagne</option>
                                 </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="tr7">
+                        <td>Date :</td>
+                        <td>
+                            <div class="form-group row">
+                                <div class="col-10">
+                                    <input class="form-control" type="date" value="2011-08-19" id="example-date-input"/>
+                                </div>
                             </div>
                         </td>
                     </tr>

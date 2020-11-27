@@ -1,23 +1,20 @@
 #test{
     width: 100%;
-    background-color: red;
 }
 
 #container_test{
     text-align: center;
     width:70%;
-    background-color: blue;
 }
 
 #petit-cont{
     width: 100%;
-    background-color: chartreuse;
 }
 
 .container_center2{
 	width: 100%;
 	float:left;
-    height: 47em;
+    height: 50em;
 	text-align: center;
 
 }
@@ -26,11 +23,14 @@
     color: grey;
 }
 .container_center2 label{
+    color: black;
+}
+#sous-titre{
     color: grey;
 }
 
 #test_form{
-    background-color: royalblue;
+    background-color: white;
     margin-top: 5%;
     width: 80%;
     margin-right: 15%;
@@ -39,7 +39,6 @@
 
 #table_test{
     width: 100%;
-    background-color:lavenderblush;
    
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -52,6 +51,7 @@
 
 #Fleche{
     text-align: center;
+    margin-bottom: 5em;
 }
 
 #arrow{
@@ -65,6 +65,40 @@
 @keyframes deplacement{
 	from{ transform: translateY(0); }
 	to{transform: translateY(50px);}
+}
+
+#tr1{
+    background-color: #E90570;
+    height: 3em;
+}
+
+#tr2{
+    background-color: #484848;
+    height: 3em;
+}
+
+#tr3{
+    background-color: #707070;
+    height: 3em;
+}
+
+#tr4{
+    background-color: #A0A0A0;
+    height: 3em;
+}
+
+#tr5{
+    background-color: #C0C0C0;
+    height: 3em;
+}
+
+#tr6{
+    background-color: #E8E8E8;
+    height: 3em;
+}
+#tr7{
+    background-color: whitesmoke;
+    height: 3em;
 }
 /*
 .nom {
