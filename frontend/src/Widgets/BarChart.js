@@ -42,7 +42,7 @@ const CustomTooltip = ({ active, payload, label }) => {
       <div className="custom-tooltip">
         <p className="label">{`${label} : ${payload[0].value}`}</p>
         <p className="intro">{getIntroOfPage(label)}</p>
-        <p className="desc">Anything you want can be displayed here.</p>
+        
       </div>
     );
   }
@@ -69,7 +69,7 @@ export default class Example extends PureComponent {
           <YAxis />
           <Tooltip content={<CustomTooltip />} />
           <Legend />
-          <Bar dataKey="NB_Ventes" barSize={20} fill="#E90570" />
+          <Bar name="Nombre de ventes" dataKey="NB_Ventes" barSize={20} fill="#E90570" />
         </BarChart>
         <p><strong>Nombre de ventes par catégorie</strong></p>
       </div>

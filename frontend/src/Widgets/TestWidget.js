@@ -47,7 +47,7 @@ export default class Example extends PureComponent {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Line type="monotone" dataKey="benefice" stroke="#E90570" activeDot={{ r: 8 }} />
+          <Line name="Bénéfice"type="monotone" dataKey="benefice" stroke="#E90570" activeDot={{ r: 8 }} />
           
         </LineChart>
         <p><strong>Évolution des ventes</strong></p>

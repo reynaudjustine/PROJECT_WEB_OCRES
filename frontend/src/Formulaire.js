@@ -31,7 +31,7 @@ class Formulaire extends Component {
                         <td>Genre :</td>
                         <td id="radio_left">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked></input>
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"></input>
                             <label class="form-check-label" for="exampleRadios1">
                                 Homme
                             </label>
@@ -84,8 +84,9 @@ class Formulaire extends Component {
                         <td>Date :</td>
                         <td>
                             <div class="form-group row">
+
                                 <div class="col-10">
-                                    <input class="form-control" type="date" value="2011-08-19" id="example-date-input"/>
+                                    <input class="form-control" type="date"></input>
                                 </div>
                             </div>
                         </td>

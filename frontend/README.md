@@ -6,6 +6,8 @@ Le frontend à été initalisé avec un create-react-app et sotrybook y est deja
 
 Storybook est là pour vous aider à prototyper et documenter vos composants. Si nous n'arrivons pas à lancer votre projet, nous pourrons au moins regarder vos composants en fonctionnement.
 
+Voici le lien de notre Trello (outil pour nous organiser) : https://trello.com/b/LiUs01fc/projet-web
+
 ## Documentation
 
 Vous pourrez supprimer le contenu de ce README et vous l'approprier en y notant les éléments importants de votre projet. Il est très important de bien documenter un projet !

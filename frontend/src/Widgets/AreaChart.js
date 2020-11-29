@@ -49,9 +49,9 @@ export default class Example extends PureComponent {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Area type="monotone" dataKey="Qfr" stroke="#E90570" fill="#E90570" fillOpacity={0.3} />
-          <Area type="monotone" dataKey="Qit" stroke="#696969" fill="#696969" fillOpacity={0.3} />
-          <Area type="monotone" dataKey="Qall" stroke="#0073CD" fill="#0073CD" fillOpacity={0.3} />
+          <Area name="France" type="monotone" dataKey="Qfr" stroke="#E90570" fill="#E90570" fillOpacity={0.3} />
+          <Area name ="Italie" type="monotone" dataKey="Qit" stroke="#696969" fill="#696969" fillOpacity={0.3} />
+          <Area name ="Allemagne" type="monotone" dataKey="Qall" stroke="#0073CD" fill="#0073CD" fillOpacity={0.3} />
         </AreaChart>
         <p><strong>Ventes par pays</strong></p>
       </div>

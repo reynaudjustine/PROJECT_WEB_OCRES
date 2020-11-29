@@ -8,32 +8,14 @@ import AreaChart from '../Widgets/AreaChart.js';
 import RadarChart from '../Widgets/RadarChart.js';
 import PieChart from '../Widgets/PieChart.js';
 import BarChart from '../Widgets/BarChart.js';
+import Chiffres from '../Widgets/Chiffres.js';
 
 
 export default {
-  title: 'Test',
+  title: 'Chiffres',
 };
 //storiesOf('LineChart', module).add('default', () => <LineChart />)
-export const Test = () => (
-   <LineChart/>
+export const chiffres = () => (
+   <Chiffres/>
   );
-  export const Area  = () => (
-    <AreaChart/>
-   );
-   export const Radar  = () => (
-    <RadarChart/>
-   );
-   export const Pie  = () => (
-    <PieChart/>
-   );
-   export const Bar  = () => (
-    <BarChart/>
-   );
-
-export const emoji = () => (
-  <Button onClick={action('clicked')}>
-    <span role="img" aria-label="so cool">
-      😀 😎 👍 💯
-    </span>
-  </Button>
-);
+  

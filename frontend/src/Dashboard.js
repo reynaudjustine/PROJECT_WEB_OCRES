@@ -16,7 +16,7 @@ class Dashboard extends Component {
         return (
             <div className="Container" id="container" >
              
-                <div className="row">
+                <div className="row" id="Gcontainer1">
                     <div class=" col-sm-6 col-lg-4  " id="petit_container1"> 
                         <TestWidget/>
                     </div>

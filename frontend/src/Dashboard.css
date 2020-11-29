@@ -4,9 +4,13 @@
 }
 body{
     background-image: url(Fond.png);
+    overflow-x: hidden; 
+    
 }
 
-
+#Gcontainer1{
+  margin: auto;
+}
 
 
 #petit_container1{
