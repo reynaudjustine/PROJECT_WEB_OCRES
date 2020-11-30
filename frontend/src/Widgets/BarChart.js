@@ -106,6 +106,8 @@ var datatest = [
   },
 ];
 
+var categorie = "Sneakers";
+
 
 const getIntroOfPage = (label) => {
   // if (label === 'Nike') {
@@ -197,18 +199,23 @@ export default class Example extends PureComponent {
   render() {
     if (this.props.id == 0) {
       datatest = dataSneakers;
+      categorie = "Sneakers"
     }
     if (this.props.id == 1) {
       datatest = dataSport;
+      categorie = "Sport"
     }
     if (this.props.id == 2) {
       datatest = dataPlage;
+      categorie = "Plage"
     }
     if (this.props.id == 3) {
       datatest = dataVille;
+      categorie = "Ville"
     }
     if (this.props.id == 4) {
       datatest = dataBottes;
+      categorie = "Bottines"
     }
     // switch (this.props.id) {
     //   case (this.props.id ==0):
@@ -252,6 +259,7 @@ export default class Example extends PureComponent {
           {/* <Legend /> */}
           <Bar name="Nombre de ventes" dataKey="NB_Ventes" barSize={20} fill="#E90570" />
         </BarChart>
+        <p>{categorie} </p>
         {/* <p><strong>Nombre de ventes par catégorie/marques</strong></p> */}
       </div>
     );

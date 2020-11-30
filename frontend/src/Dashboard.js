@@ -41,7 +41,7 @@ class Dashboard extends Component {
                     </div>
                     <div class=" col-sm-6 col-lg-4 " id="petit_container2">
                         {/* <BarChart/> */}
-                        <Carousel>
+                        <Carousel indicators={false} >
                             <Carousel.Item>
                                 <BarChart id="0"/>
                             </Carousel.Item>
