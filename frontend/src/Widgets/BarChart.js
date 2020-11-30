@@ -259,7 +259,7 @@ export default class Example extends PureComponent {
           {/* <Legend /> */}
           <Bar name="Nombre de ventes" dataKey="NB_Ventes" barSize={20} fill="#E90570" />
         </BarChart>
-        <p>{categorie} </p>
+        <p>Catégorie : {categorie} </p>
         {/* <p><strong>Nombre de ventes par catégorie/marques</strong></p> */}
       </div>
     );
