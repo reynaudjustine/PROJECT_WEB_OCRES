@@ -27,3 +27,6 @@ Pour lancer notre projet (frontend), il faut se placer dans le dossier frontend 
 # Organisation du projet
 
 Voici le lien de notre Trello (outil pour nous organiser) : https://trello.com/b/LiUs01fc/projet-web
+
+# Difficultés et problèmes
+Nous avons un leger problème de responsive. Lorsque que nous descendons en dessous de 500px de largeurs, le bouton formulaire sort de la nav bar.

@@ -143,7 +143,7 @@ export default class Example extends PureComponent {
    constructor(props) {
      super(props);
    this.state = {
-       datatest :null
+       datatest :dataSneakers
    };
  }
 //   switchdata(id) {
