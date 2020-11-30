@@ -8,15 +8,15 @@ class Chiffres extends Component {
                 <div id="container_tab2">
                     <table className="table">
                         <ul id="ul1">
-                            <td><strong>Recette des ventes :</strong></td>
+                            <td><strong>Recette des ventes (€) :</strong></td>
                             <td>1000</td>
                         </ul>
                         <ul id="ul2">
-                            <td><strong>Montant achat en ligne</strong></td>
+                            <td><strong>Montant achat en ligne (€) </strong></td>
                             <td>2000</td>
                         </ul>
                         <ul id="ul3">
-                            <td><strong>Nombre de vente chaussures femme</strong></td>
+                            <td><strong>Nombre de vente chaussures femme  </strong></td>
                             <td>3000</td>
                         </ul>
                         <ul id="ul4">
