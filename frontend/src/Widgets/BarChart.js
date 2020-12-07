@@ -17,7 +17,7 @@ const dataSneakers = [
     Marque: 'Puma', NB_Ventes: 2780,
   },
   {
-    Marque: 'Converse', NB_Ventes: 1890,
+    Marque: 'Conver.', NB_Ventes: 1890,
   },
 ];
 const dataSport = [
@@ -34,7 +34,7 @@ const dataSport = [
     Marque: 'Puma', NB_Ventes: 2780,
   },
   {
-    Marque: 'Salomon', NB_Ventes: 1890,
+    Marque: 'Salom.', NB_Ventes: 1890,
   },
 ];
 const dataPlage = [
@@ -56,7 +56,7 @@ const dataPlage = [
 ];
 const dataVille = [
   {
-    Marque: 'Bexley', NB_Ventes: 4000,
+    Marque: 'Bexl.', NB_Ventes: 4000,
   },
   {
     Marque: 'Grenson', NB_Ventes: 3000, 
@@ -244,7 +244,7 @@ export default class Example extends PureComponent {
         {/* <h1>{this.props.id}</h1> */}
         {/* <h1>{this.state.id}</h1> */}
         <BarChart
-          width={400}
+          width={380}
           height={300}
          
           data={datatest}
