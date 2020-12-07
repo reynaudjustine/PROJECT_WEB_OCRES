@@ -1,3 +1,10 @@
+//Connextion à MongoDB
+const mongoose = require ('mongoose');
+mongoose.Promise = global.Promise;
+const dbName = "Juscar";
+const dbURL=`mongodb://localhost:27017/${dbName}`
+mongoose.connect(dbURL,{useNewUrlParser:true});
+
 var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
