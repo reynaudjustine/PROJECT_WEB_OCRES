@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import Routes from './Routes';
 import "./Dashboard.css"
+
 /*import logo from './logo.svg';
 import './App.css';*/
 /*import {BrowseRouter as Router, Route, Link, Switch} from "react-router-dom";
@@ -28,6 +29,7 @@ import Formulaire from './Formulaire'*/
     </div>
   );
 }*/
+
 
 class App extends Component {
   render(){
