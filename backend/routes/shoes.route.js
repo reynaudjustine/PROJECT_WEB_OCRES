@@ -81,12 +81,24 @@ router.get("/",ShoesControl.getAllShoes);
 router.get("/:id",ShoesControl.getOneShoe)
 
 /*GET one movie.*/
-// router.get("/:model", (req, res) => {
-// 	//const { model } = req.params.;
-// 	shoesmodel.find((err,shoe) =>
-// 		{modele: `${req.params.model}`,
-// 		res.status(200).json(shoe);});
-// }); 
+ router.get("/modele/:modele", (req, res) => {
+	const modele = req.params.modele;
+	console.log(modele);
+	shoesmodel.find({modele},(err,shoe)=>
+	{
+		res.status(200).json(shoe);
+	});
+	}); 
+	router.get("/marque/:marque", (req, res) => {
+		const marque = req.params.marque;
+		console.log(marque);
+		shoesmodel.find({marque},(err,shoe)=>
+		{
+			res.status(200).json(shoe);
+		});
+		}); 
+
+//router.get("/marque",(req,res))
 
 // router.get("/:id", (req,res)=>{
 // 	const id = req.params.id;
