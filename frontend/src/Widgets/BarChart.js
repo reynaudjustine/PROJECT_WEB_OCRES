@@ -9,7 +9,7 @@ import {
 // .then(res => {console.log("reponse"+res.data)});
 // console.log("TEST1");
 
-const axios = require('axios');
+/*const axios = require('axios');
 
 async function makeGetRequest() {
   console.log("TEST1");
@@ -18,7 +18,8 @@ async function makeGetRequest() {
   console.log(data);
 }
 
-makeGetRequest();
+makeGetRequest();*/
+
 
 const dataSneakers = [
   {
