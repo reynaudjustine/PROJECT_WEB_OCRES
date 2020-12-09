@@ -30,9 +30,10 @@ import Formulaire from './Formulaire'*/
   );
 }*/
 
-
+console.log("AUTRE TEST");
 class App extends Component {
   render(){
+    console.log("TEST RENDER");
     return(
       <div>
         <header>

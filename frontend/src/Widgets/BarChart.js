@@ -2,25 +2,38 @@ import React, { PureComponent } from 'react';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
-//import axios from 'axios';
+import axios from 'axios';
 
 
-// axios.get('http://localhost/3000/shoes')
-// .then(res => {console.log("reponse"+res.data)});
-// console.log("TEST1");
+axios.get('http://localhost:3000/shoes')
+.then(res => {
+  console.log("reponse"+res.data);
+  let M1 = res.data[0].modele;
+  let M2 = res.data[1].modele;
+  let M3 = res.data[2].modele;
+  console.log(" Valeur1 " +M1);
+  console.log(" Valeur2 " +M2);
+  console.log(" Valeur3 " +M3);
+});
 
-/*const axios = require('axios');
+const axios = require('axios');
 
-async function makeGetRequest() {
-  console.log("TEST1");
-  let res = await axios.get('http://localhost/3000/shoes');
-  let data = res.data;
-  console.log(data);
-}
-
-makeGetRequest();*/
+// const axios = require('axios');
 
 
+makeGetRequest();
+
+
+// async function makeGetRequest() {
+//   console.log("TEST1");
+//   let res = await axios.get('http://localhost/3000/shoes');
+//   let data = res;
+//   console.log(data);
+//   return data;
+// }
+
+
+//let test = makeGetRequest();
 const dataSneakers = [
   {
     Marque: 'Nike', NB_Ventes: 4000,
@@ -128,6 +141,7 @@ var categorie = "Sneakers";
 
 
 const getIntroOfPage = (label) => {
+  console.log("testencore");
   // if (label === 'Nike') {
   //   return "";
   // } if (label === 'Adidas') {
@@ -235,31 +249,10 @@ export default class Example extends PureComponent {
       datatest = dataBottes;
       categorie = "Bottines"
     }
-    // switch (this.props.id) {
-    //   case (this.props.id ==0):
-    //     {datatest = dataSneakers}
-    //     break;
-    //     case (this.props.id==1):
-    //       this.setState({datatest:dataSport})
-    //     break;
-    //     case (this.props.id==2):
-    //       this.setState({datatest:dataPlage})
-    //     break;
-    //     case (this.props.id==3):
-    //       this.setState({datatest:dataVille})
-    //     break;
-    //     case (this.props.id==4):
-    //       this.setState({datatest:dataBottes})
-    //     break;
-    
-    //   default:
-    //     break;
-    // }
-  
     return (
       <div>
         
-        {/* <h1>{this.props.id}</h1> */}
+        {console.log("Barchart test")}
         {/* <h1>{this.state.id}</h1> */}
         <BarChart
           width={380}
