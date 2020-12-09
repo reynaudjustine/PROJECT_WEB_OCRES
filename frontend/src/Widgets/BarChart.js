@@ -2,6 +2,23 @@ import React, { PureComponent } from 'react';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
+//import axios from 'axios';
+
+
+// axios.get('http://localhost/3000/shoes')
+// .then(res => {console.log("reponse"+res.data)});
+// console.log("TEST1");
+
+const axios = require('axios');
+
+async function makeGetRequest() {
+  console.log("TEST1");
+  let res = await axios.get('http://localhost/3000/shoes');
+  let data = res.data;
+  console.log(data);
+}
+
+makeGetRequest();
 
 const dataSneakers = [
   {
