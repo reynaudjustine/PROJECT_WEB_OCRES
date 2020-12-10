@@ -104,7 +104,7 @@ router.delete("/:id",ShoesControl.deleteOneShoe);
  
 
 /*GET one movie.*/
-<<<<<<< HEAD
+/*
  router.get("/modele/:modele", (req, res) => {
 	const modele = req.params.modele;
 	console.log(modele);
@@ -122,8 +122,7 @@ router.get("/marque/:marque", (req, res) => {
 	{
 		res.status(200).json(shoe);
 	});
-	}); 
-=======
+	}); */
 //  router.get("/modele/:modele", (req, res) => {
 // 	const modele = req.params.modele;
 // 	console.log(modele);
@@ -140,7 +139,7 @@ router.get("/marque/:marque", (req, res) => {
 	// 	// 	res.status(200).json(shoe);
 	// 	// });
 	// 	}); 
->>>>>>> f430ef8712fb7e14d8c99f08cd47923e1c928e71
+
 
 //router.get("/marque",(req,res))
 

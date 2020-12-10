@@ -23,128 +23,16 @@ axios.get('http://localhost:3000/shoes/marque/Nike')
   console.log(res.data.length);
 })
 
-// console.log("TEST0");
 
 
-// const axios = require('axios');
+//Sneakers 
+let SnNike=0;
+let SnAd=0;
+let SnVans=0;
+let SnPumas=0;
+let SnConv=0;
 
 
-//makeGetRequest();
-
-
-// async function makeGetRequest() {
-//   console.log("TEST1");
-//   let res = await axios.get('http://localhost/3000/shoes');
-//   let data = res;
-//   console.log(data);
-//   return data;
-// }
-
-
-//let test = makeGetRequest();
-let testnike = 2000;
-const dataSneakers = [
-  {
-    Marque: 'Nike', NB_Ventes: testnike,
-  },
-  {
-    Marque: 'Adidas', NB_Ventes: 3000, 
-  },
-  {
-    Marque: 'Vans', NB_Ventes: 2000,
-  },
-  {
-    Marque: 'Puma', NB_Ventes: 2780,
-  },
-  {
-    Marque: 'Conver.', NB_Ventes: 1890,
-  },
-];
-const dataSport = [
-  {
-    Marque: 'Nike', NB_Ventes: 4000,
-  },
-  {
-    Marque: 'Adidas', NB_Ventes: 3000, 
-  },
-  {
-    Marque: 'Asics', NB_Ventes: 2000,
-  },
-  {
-    Marque: 'Puma', NB_Ventes: 2780,
-  },
-  {
-    Marque: 'Salom.', NB_Ventes: 1890,
-  },
-];
-const dataPlage = [
-  {
-    Marque: 'Nike', NB_Ventes: 4000,
-  },
-  {
-    Marque: 'Fila', NB_Ventes: 3000, 
-  },
-  {
-    Marque: 'Havai.', NB_Ventes: 2000,
-  },
-  {
-    Marque: 'Ipa.', NB_Ventes: 2780,
-  },
-  {
-    Marque: 'Kappa', NB_Ventes: 1890,
-  },
-];
-const dataVille = [
-  {
-    Marque: 'Bexl.', NB_Ventes: 4000,
-  },
-  {
-    Marque: 'Grenson', NB_Ventes: 3000, 
-  },
-  {
-    Marque: 'Celio', NB_Ventes: 2000,
-  },
-  {
-    Marque: 'Azzaro', NB_Ventes: 2780,
-  },
-  {
-    Marque: 'Berluti', NB_Ventes: 1890,
-  },
-];
-const dataBottes = [
-  {
-    Marque: 'Doc Mr.', NB_Ventes: 4000,
-  },
-  {
-    Marque: 'Ugg', NB_Ventes: 3000, 
-  },
-  {
-    Marque: 'Moon.', NB_Ventes: 2000,
-  },
-  {
-    Marque: 'Timb.', NB_Ventes: 2780,
-  },
-  {
-    Marque: 'Minneli', NB_Ventes: 1890,
-  },
-];
-var datatest = [
-  {
-    Marque: '', NB_Ventes: 0,
-  },
-  {
-    Marque: '', NB_Ventes: 0, 
-  },
-  {
-    Marque: ' ', NB_Ventes: 0,
-  },
-  {
-    Marque: '', NB_Ventes: 0,
-  },
-  {
-    Marque: '', NB_Ventes: 0,
-  },
-];
 
 var categorie = "Sneakers";
 
@@ -181,63 +69,160 @@ const CustomTooltip = ({ active, payload, label }) => {
 
 export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/vxq4ep63/';
+  
    constructor(props) {
      super(props);
+
    this.state = {
-       datatest :dataSneakers
+       datatest :[],
+       SnNike: 0,
+       SnAd: 0,
+       SnVans: 0,
+       SnPumas: 0,
+       SnConv: 0,
    };
- }
-//   switchdata(id) {
-//     switch (id) {
-//       case (id ==0):
-//         //this.setState({datatest:dataSneakers})
-//         return dataSneakers
-//         break;
-//         case (id==1):
-//           this.setState({datatest:dataSport})
-//         break;
-//         case (id==2):
-//           this.setState({datatest:dataPlage})
-//         break;
-//         case (id==3):
-//           this.setState({datatest:dataVille})
-//         break;
-//         case (id==4):
-//           this.setState({datatest:dataBottes})
-//         break;
-    
-//       default:
-//         break;
-        
-//     }
-    
-//     // choix = 0;
-//     // this.setState({choix:0});
-//  }
+
  
-//   switchdata1() {
-//     data = 0;
-//     this.setState({data:dataSneakers});
-//  }
-//  switchdata2() {
-//   data = 1;
-//   this.setState({data:dataSport});
-// }
-// switchdata3() {
-//   data = 2;
-//   this.setState({data:dataPlage});
-// }
-// switchdata4() {
-//   data = 3;
-//   this.setState({data:dataVille});
-// }
-// switchdata5() {
-//   data = 4;
-//   this.setState({data:dataBottes});
-// }
+ }
+
+ componentDidMount()
+ {
+   axios.get('http://localhost:3000/shoes/categorie/Sneakers/Nike')
+   .then(res => {
+     SnNike=res.data.length;
+     this.setState({SnNike})
+   })
+
+
+   axios.get('http://localhost:3000/shoes/categorie/Sneakers/Adidas')
+   .then(res => {
+     SnAd=res.data.length;
+     this.setState({SnAd})
+   })
+
+   axios.get('http://localhost:3000/shoes/categorie/Sneakers/Vans')
+   .then(res => {
+     SnVans=res.data.length;
+     this.setState({SnVans})
+   })
+
+   axios.get('http://localhost:3000/shoes/categorie/Sneakers/Converse')
+   .then(res => {
+     SnConv=res.data.length;
+     this.setState({SnConv})
+   })
+ }
  
 
+
+
   render() {
+    const dataSneakers = [
+      {
+        Marque: 'Nike', NB_Ventes: SnNike,
+      },
+      {
+        Marque: 'Adidas', NB_Ventes: SnAd, 
+      },
+      {
+        Marque: 'Vans', NB_Ventes: SnVans,
+      },
+      {
+        Marque: 'Puma', NB_Ventes: SnPumas,
+      },
+      {
+        Marque: 'Conver.', NB_Ventes: SnConv,
+      },
+    ];
+
+
+    const dataSport = [
+      {
+        Marque: 'Nike', NB_Ventes: 4000,
+      },
+      {
+        Marque: 'Adidas', NB_Ventes: 3000, 
+      },
+      {
+        Marque: 'Asics', NB_Ventes: 2000,
+      },
+      {
+        Marque: 'Puma', NB_Ventes: 2780,
+      },
+      {
+        Marque: 'Salom.', NB_Ventes: 1890,
+      },
+    ];
+    const dataPlage = [
+      {
+        Marque: 'Nike', NB_Ventes: 4000,
+      },
+      {
+        Marque: 'Fila', NB_Ventes: 3000, 
+      },
+      {
+        Marque: 'Havai.', NB_Ventes: 2000,
+      },
+      {
+        Marque: 'Ipa.', NB_Ventes: 2780,
+      },
+      {
+        Marque: 'Kappa', NB_Ventes: 1890,
+      },
+    ];
+    const dataVille = [
+      {
+        Marque: 'Bexl.', NB_Ventes: 4000,
+      },
+      {
+        Marque: 'Grenson', NB_Ventes: 3000, 
+      },
+      {
+        Marque: 'Celio', NB_Ventes: 2000,
+      },
+      {
+        Marque: 'Azzaro', NB_Ventes: 2780,
+      },
+      {
+        Marque: 'Berluti', NB_Ventes: 1890,
+      },
+    ];
+    const dataBottes = [
+      {
+        Marque: 'Doc Mr.', NB_Ventes: 4000,
+      },
+      {
+        Marque: 'Ugg', NB_Ventes: 3000, 
+      },
+      {
+        Marque: 'Moon.', NB_Ventes: 2000,
+      },
+      {
+        Marque: 'Timb.', NB_Ventes: 2780,
+      },
+      {
+        Marque: 'Minneli', NB_Ventes: 1890,
+      },
+    ];
+    var datatest = [
+      {
+        Marque: '', NB_Ventes: 0,
+      },
+      {
+        Marque: '', NB_Ventes: 0, 
+      },
+      {
+        Marque: ' ', NB_Ventes: 0,
+      },
+      {
+        Marque: '', NB_Ventes: 0,
+      },
+      {
+        Marque: '', NB_Ventes: 0,
+      },
+    ];
+
+
     if (this.props.id == 0) {
       datatest = dataSneakers;
       categorie = "Sneakers"
