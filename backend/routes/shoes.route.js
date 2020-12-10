@@ -89,14 +89,16 @@ router.get("/:id",ShoesControl.getOneShoe)
 		res.status(200).json(shoe);
 	});
 	}); 
-	router.get("/marque/:marque", (req, res) => {
-		const marque = req.params.marque;
-		console.log(marque);
-		shoesmodel.find({marque},(err,shoe)=>
-		{
-			res.status(200).json(shoe);
-		});
-		}); 
+
+	
+router.get("/marque/:marque", (req, res) => {
+	const marque = req.params.marque;
+	console.log(marque);
+	shoesmodel.find({marque},(err,shoe)=>
+	{
+		res.status(200).json(shoe);
+	});
+	}); 
 
 //router.get("/marque",(req,res))
 

@@ -16,12 +16,12 @@ axios.get('http://localhost:3000/shoes')
   console.log(" Valeur3 " +M3);
 });
 
-const axios = require('axios');
+//const axios = require('axios');
 
 // const axios = require('axios');
 
 
-makeGetRequest();
+//makeGetRequest();
 
 
 // async function makeGetRequest() {
