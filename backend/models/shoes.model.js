@@ -26,7 +26,7 @@ const shoes = new mongoose.Schema({
         required:true,
     },
     mdv:{
-        type:Date,
+        type:String,
         required:true,
     }
 

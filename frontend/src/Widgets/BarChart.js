@@ -16,6 +16,11 @@ axios.get('http://localhost:3000/shoes')
   console.log(" Valeur3 " +M3);
 });
 
+axios.get('http://localhost:3000/shoes/marque/Nike')
+.then(res => {
+  console.log(res.data.length);
+})
+
 // console.log("TEST0");
 
 // const axios = require('axios');
@@ -29,9 +34,10 @@ axios.get('http://localhost:3000/shoes')
 // }
 
 //let test = makeGetRequest();
+let testnike = 2000;
 const dataSneakers = [
   {
-    Marque: 'Nike', NB_Ventes: 4000,
+    Marque: 'Nike', NB_Ventes: testnike,
   },
   {
     Marque: 'Adidas', NB_Ventes: 3000, 

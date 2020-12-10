@@ -77,26 +77,49 @@ const MONGO_DB = '';
   
 // });
 
+//Route pour gets différentes info utiles au Dashboard
 router.get("/",ShoesControl.getAllShoes);
-router.get("/:id",ShoesControl.getOneShoe)
+router.get("/:id",ShoesControl.getOneShoe);
+router.get("/modele/:modele",ShoesControl.getModele);
+router.get("/marque/:marque",ShoesControl.getMarque);
+router.get("/pays/:pdv",ShoesControl.getPays);
+router.get("/mois/:mdv",ShoesControl.getMois);
+router.get("/genre/:genre",ShoesControl.getGenre);
+router.get("/categorie/:categorie",ShoesControl.getCategorie);
+
+//Delete avec ID
+router.delete("/:id",ShoesControl.deleteOneShoe);
+
+//get chaussure en fonction de catégorie et marque
+ router.get("/categorie/:categorie/:marque", (req, res) => {
+	 const categorie = req.params.categorie;
+	 const marque = req.params.marque;
+	 console.log(categorie);
+	 console.log(marque);
+ 	shoesmodel.find({categorie,marque},(err,test)=>
+ 	{res.status(200).json(test);
+ 	});
+ })
+
+ 
 
 /*GET one movie.*/
- router.get("/modele/:modele", (req, res) => {
-	const modele = req.params.modele;
-	console.log(modele);
-	shoesmodel.find({modele},(err,shoe)=>
-	{
-		res.status(200).json(shoe);
-	});
-	}); 
-	router.get("/marque/:marque", (req, res) => {
-		const marque = req.params.marque;
-		console.log(marque);
-		shoesmodel.find({marque},(err,shoe)=>
-		{
-			res.status(200).json(shoe);
-		});
-		}); 
+//  router.get("/modele/:modele", (req, res) => {
+// 	const modele = req.params.modele;
+// 	console.log(modele);
+// 	shoesmodel.find({modele},(err,shoe)=>
+// 	{
+// 		res.status(200).json(shoe);
+// 	});
+// 	}); 
+	// router.get("/marque/:marque", (req, res) => {
+	// 	// const marque = req.params.marque;
+	// 	// console.log(marque);
+	// 	// shoesmodel.find({marque},(err,shoe)=>
+	// 	// {
+	// 	// 	res.status(200).json(shoe);
+	// 	// });
+	// 	}); 
 
 //router.get("/marque",(req,res))
 
@@ -180,17 +203,17 @@ router.put('/:id', (req, res) => {
 });
 
 /* DELETE movie. */
-router.delete('/:id', (req, res) => {
-	//get the id of the movie we want to delete from the params of the request
-	const { id } = req.params;
+// router.delete('/:id', (req, res) => {
+// 	//get the id of the movie we want to delete from the params of the request
+// 	const { id } = req.params;
 
-	//Remove from "DB"
-	_.remove(movies, ["id", id]);
+// 	//Remove from "DB"
+// 	_.remove(movies, ["id", id]);
 
-	// Return message
-	res.json({
-		message: "just removed ${id}"
-	});
-});
+// 	// Return message
+// 	res.json({
+// 		message: "just removed ${id}"
+// 	});
+// });
 
 module.exports = router;
