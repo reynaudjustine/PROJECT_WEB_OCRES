@@ -3,29 +3,161 @@ import {
   Radar, RadarChart, PolarGrid, Legend,
   PolarAngleAxis, PolarRadiusAxis,
 } from 'recharts';
+import axios from 'axios';
 
-const data = [
-  {
-    subject: 'Sneakers', Juscar: 90, Asos: 10, fullMark: 100,
-  },
-  {
-    subject: 'Sport', Juscar: 30, Asos: 70, fullMark: 100,
-  },
-  {
-    subject: 'Ville', Juscar: 25, Asos: 75, fullMark: 100,
-  },
-  {
-    subject: 'Bottines', Juscar: 51, Asos: 49, fullMark: 100,
-  },
-  {
-    subject: 'Plage', Juscar: 55, Asos: 45, fullMark: 100,
-  },
-];
+//total vente par categorie de notre entreprise et de celle d Asos
+let totVentesSnJO=0;
+let totVentesSn=0;
+
+let totVentesSpJO=0;
+let totVentesSp=0;
+
+let totVentesPJO=0;
+let totVentesP=0;
+
+let totVentesVJO=0;
+let totVentesV=0;
+
+let totVentesBJO=0;
+let totVentesB=0;
+
+let totVentesJO=0;
+let totVentes=0;
+
+let totVentesAsos=200;
+let totVentesSnAsos=80;
+let totVentesSpAsos=20;
+let totVentesPAsos=5;
+let totVentesVAsos=50;
+let totVentesBAsos=45;
+
+//pourcentage
+let pourcSn=0;
+let pourcSp=0;
+let pourcP=0;
+let pourcV=0;
+let pourcB=0;
+
+//pourcentage Asos
+let pourcSnAsos=0;
+let pourcSpAsos=0;
+let pourcPAsos=0;
+let pourcVAsos=0;
+let pourcBAsos=0;
 
 export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/dpgb3xjq/';
 
-  render() {
+  state = {
+    Test: 0,
+  };
+
+  componentDidMount()
+ {
+    //Requetes
+    /*axios.get('http://localhost:3000/shoes')
+    .then(res => {
+      totVentesJO=res.data.length;
+      this.setState({totVentesJO})
+    })
+    totVentes=totVentesJO+totVentesAsos;*/
+
+   
+    axios.get('http://localhost:3000/shoes/categorie/Sneakers')
+    .then(res => {
+      totVentesSnJO=res.data.length;
+      pourcSn=(totVentesSnJO/totVentesSn)*100;
+
+      this.setState({pourcSn})
+      
+    })
+    
+
+    axios.get('http://localhost:3000/shoes/categorie/Sport')
+    .then(res => {
+      totVentesSpJO=res.data.length;
+
+
+      this.setState({totVentesSpJO})
+    })
+    
+
+    axios.get('http://localhost:3000/shoes/categorie/Plage')
+    .then(res => {
+      totVentesPJO=res.data.length;
+      this.setState({totVentesPJO})
+    })
+    
+    
+    axios.get('http://localhost:3000/shoes/categorie/Ville')
+    .then(res => {
+      totVentesVJO=res.data.length;
+      this.setState({totVentesVJO})
+    })
+    
+    
+    axios.get('http://localhost:3000/shoes/categorie/Bottines')
+    .then(res => {
+      totVentesBJO=res.data.length;
+      this.setState({totVentesBJO})
+    })
+    
+  }
+
+
+
+  render() 
+  {
+    //Sneakers
+    totVentesSn=totVentesSnJO+totVentesSnAsos;
+    pourcSnAsos=(totVentesSnAsos/totVentesSn)*100;
+
+    //Sport
+    totVentesSp=totVentesSpJO+totVentesSpAsos;
+    pourcSp=(totVentesSpJO/totVentesSp)*100;
+    pourcSpAsos=(totVentesSpAsos/totVentesSp)*100;
+    
+
+    //Plage
+    totVentesP=totVentesPJO+totVentesPAsos;
+    pourcP=(totVentesPJO/totVentesP)*100;
+    pourcPAsos=(totVentesPAsos/totVentesP)*100;
+
+    //Ville
+    totVentesV=totVentesVJO+totVentesVAsos;
+    pourcV=(totVentesVJO/totVentesV)*100;
+    pourcVAsos=(totVentesVAsos/totVentesV)*100;
+
+    //Bottines
+    totVentesB=totVentesBJO+totVentesBAsos;
+    pourcB=(totVentesBJO/totVentesB)*100;
+    pourcBAsos=(totVentesBAsos/totVentesB)*100;
+    
+
+    console.log("TotVentesBJO = "+totVentesBJO);
+    console.log("TotVentesB = "+totVentesB);
+    console.log("pourcB = "+pourcB);
+
+    console.log("pourcSn = "+pourcSn);
+      console.log("pourcSnAsos = "+pourcSnAsos);
+    const data = [
+      {
+        subject: 'Sneakers', Juscar: {pourcSn}, Asos: {pourcSnAsos}, fullMark: 100,
+      },
+      {
+        subject: 'Sport', Juscar: {pourcSp}, Asos: {pourcSpAsos}, fullMark: 100,
+      },
+      {
+        subject: 'Ville', Juscar: {pourcV}, Asos: {pourcVAsos}, fullMark: 100,
+      },
+      {
+        subject: 'Bottines', Juscar: {pourcB}, Asos: {pourcBAsos}, fullMark: 100,
+      },
+      {
+        subject: 'Plage', Juscar: {pourcP}, Asos: {pourcPAsos}, fullMark: 100,
+      },
+    ];
+
     return (
       <div>
         <RadarChart cx={200} cy={170} outerRadius={150} width={400} height={350} data={data}>

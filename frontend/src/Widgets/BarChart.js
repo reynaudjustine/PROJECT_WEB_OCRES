@@ -413,8 +413,6 @@ export default class Example extends PureComponent {
     }
     return (
       <div>
-        
-        {console.log("Barchart test")}
         {/* <h1>{this.state.id}</h1> */}
         <BarChart
           width={380}
