@@ -15,11 +15,9 @@ axios.get('http://localhost:3000/shoes')
   console.log(" Valeur2 " +M2);
   console.log(" Valeur3 " +M3);
 });
+ let testnike=0;
 
-axios.get('http://localhost:3000/shoes/marque/Nike')
-.then(res => {
-  console.log(res.data.length);
-})
+
 
 // console.log("TEST0");
 
@@ -34,25 +32,8 @@ axios.get('http://localhost:3000/shoes/marque/Nike')
 // }
 
 //let test = makeGetRequest();
-let testnike = 2000;
-const dataSneakers = [
-  {
-    Marque: 'Nike', NB_Ventes: testnike,
-  },
-  {
-    Marque: 'Adidas', NB_Ventes: 3000, 
-  },
-  {
-    Marque: 'Vans', NB_Ventes: 2000,
-  },
-  {
-    Marque: 'Puma', NB_Ventes: 2780,
-  },
-  {
-    Marque: 'Conver.', NB_Ventes: 1890,
-  },
-];
-const dataSport = [
+
+let dataSport = [
   {
     Marque: 'Nike', NB_Ventes: 4000,
   },
@@ -69,7 +50,7 @@ const dataSport = [
     Marque: 'Salom.', NB_Ventes: 1890,
   },
 ];
-const dataPlage = [
+let dataPlage = [
   {
     Marque: 'Nike', NB_Ventes: 4000,
   },
@@ -86,7 +67,7 @@ const dataPlage = [
     Marque: 'Kappa', NB_Ventes: 1890,
   },
 ];
-const dataVille = [
+let dataVille = [
   {
     Marque: 'Bexl.', NB_Ventes: 4000,
   },
@@ -103,7 +84,7 @@ const dataVille = [
     Marque: 'Berluti', NB_Ventes: 1890,
   },
 ];
-const dataBottes = [
+let dataBottes = [
   {
     Marque: 'Doc Mr.', NB_Ventes: 4000,
   },
@@ -120,7 +101,7 @@ const dataBottes = [
     Marque: 'Minneli', NB_Ventes: 1890,
   },
 ];
-var datatest = [
+let datatest = [
   {
     Marque: '', NB_Ventes: 0,
   },
@@ -176,9 +157,20 @@ export default class Example extends PureComponent {
    constructor(props) {
      super(props);
    this.state = {
-       datatest :dataSneakers
+       datatest :[],
+       testnike:0
    };
  }
+ componentDidMount()
+{
+  axios.get('http://localhost:3000/shoes/categorie/Sneakers/Nike')
+  .then(res => {
+    testnike = res.data.length;
+    console.log(testnike);
+    this.setState({testnike})
+  })
+  console.log(testnike);
+}
 //   switchdata(id) {
 //     switch (id) {
 //       case (id ==0):
@@ -230,6 +222,24 @@ export default class Example extends PureComponent {
  
 
   render() {
+
+    let dataSneakers = [
+      {
+        Marque: 'Nike', NB_Ventes: testnike,
+      },
+      {
+        Marque: 'Adidas', NB_Ventes: 0, 
+      },
+      {
+        Marque: 'Vans', NB_Ventes: 0,
+      },
+      {
+        Marque: 'Puma', NB_Ventes: 0,
+      },
+      {
+        Marque: 'Conver.', NB_Ventes: 0,
+      },
+    ];
     if (this.props.id == 0) {
       datatest = dataSneakers;
       categorie = "Sneakers"
