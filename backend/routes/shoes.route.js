@@ -104,6 +104,25 @@ router.delete("/:id",ShoesControl.deleteOneShoe);
  
 
 /*GET one movie.*/
+/*
+ router.get("/modele/:modele", (req, res) => {
+	const modele = req.params.modele;
+	console.log(modele);
+	shoesmodel.find({modele},(err,shoe)=>
+	{
+		res.status(200).json(shoe);
+	});
+	}); 
+
+	
+router.get("/marque/:marque", (req, res) => {
+	const marque = req.params.marque;
+	console.log(marque);
+	shoesmodel.find({marque},(err,shoe)=>
+	{
+		res.status(200).json(shoe);
+	});
+	}); */
 //  router.get("/modele/:modele", (req, res) => {
 // 	const modele = req.params.modele;
 // 	console.log(modele);
@@ -120,6 +139,7 @@ router.delete("/:id",ShoesControl.deleteOneShoe);
 	// 	// 	res.status(200).json(shoe);
 	// 	// });
 	// 	}); 
+
 
 //router.get("/marque",(req,res))
 
