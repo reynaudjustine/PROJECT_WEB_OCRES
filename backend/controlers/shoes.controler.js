@@ -67,6 +67,26 @@ const getCategorie =(req,res)=>{
 	});
 }
 
+const getCatMar = (req,res) =>{
+	const categorie = req.params.categorie;
+	 const marque= req.params.marque;
+	 console.log(categorie);
+	 console.log(marque);
+ 	shoesmodel.find({categorie,marque},(err,test)=>
+ 	{res.status(200).json(test);
+ 	});
+}
+
+ const getPaysMois = (req,res) =>{
+	const pdv = req.params.pdv;
+	const mdv = req.params.mdv;
+	console.log(pdv);
+	console.log(mdv);
+	shoesmodel.find({pdv,mdv},(err,test)=>
+	{res.status(200).json(test);
+	});
+ }
+
 const deleteOneShoe =(req,res)=>{
 	const id = req.params.id;
 	console.log(id);
@@ -75,4 +95,4 @@ const deleteOneShoe =(req,res)=>{
 	});
 }
 
-module.exports = {getAllShoes, getOneShoe,getMarque,getModele,getPays,getMois, getGenre,getCategorie,deleteOneShoe}
+module.exports = {getAllShoes, getOneShoe,getMarque,getModele,getPays,getMois, getGenre,getCategorie,getCatMar,getPaysMois,deleteOneShoe}

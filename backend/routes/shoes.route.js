@@ -86,21 +86,16 @@ router.get("/pays/:pdv",ShoesControl.getPays);
 router.get("/mois/:mdv",ShoesControl.getMois);
 router.get("/genre/:genre",ShoesControl.getGenre);
 router.get("/categorie/:categorie",ShoesControl.getCategorie);
+router.get("/categorie/:categorie/:marque",ShoesControl.getCatMar);
+router.get("/pays/:pdv/:mdv", ShoesControl.getPaysMois);
 
 //Delete avec ID
 router.delete("/:id",ShoesControl.deleteOneShoe);
-
 //get chaussure en fonction de catégorie et marque
- router.get("/categorie/:categorie/:marque", (req, res) => {
-	 const categorie = req.params.categorie;
-	 const marque = req.params.marque;
-	 console.log(categorie);
-	 console.log(marque);
- 	shoesmodel.find({categorie,marque},(err,test)=>
- 	{res.status(200).json(test);
- 	});
- })
 
+
+//TENTATIVE de POST dans BDD
+router.post("/:")
  
 
 /*GET one movie.*/
