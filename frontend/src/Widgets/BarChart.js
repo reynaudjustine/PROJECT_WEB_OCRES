@@ -5,7 +5,7 @@ import {
 import axios from 'axios';
 
 
-axios.get('http://localhost:3000/shoes')
+/*axios.get('http://localhost:3000/shoes')
 .then(res => {
   console.log("reponse"+res.data);
   let M1 = res.data[0].modele;
@@ -14,14 +14,14 @@ axios.get('http://localhost:3000/shoes')
   console.log(" Valeur1 " +M1);
   console.log(" Valeur2 " +M2);
   console.log(" Valeur3 " +M3);
-});
+});*/
 
 
 
-axios.get('http://localhost:3000/shoes/marque/Nike')
+/*axios.get('http://localhost:3000/shoes/marque/Nike')
 .then(res => {
   console.log(res.data.length);
-})
+})*/
 
 
 
@@ -65,7 +65,7 @@ var categorie = "Sneakers";
 
 
 const getIntroOfPage = (label) => {
-  console.log("testencore");
+  //console.log("testencore");
   // if (label === 'Nike') {
   //   return "";
   // } if (label === 'Adidas') {
@@ -102,11 +102,11 @@ export default class Example extends PureComponent {
 
    this.state = {
        datatest :[],
-       SnNike: 0,
+       /*SnNike: 0,
        SnAd: 0,
        SnVans: 0,
        SnPuma: 0,
-       SnConv: 0,
+       SnConv: 0,*/
    };
 
  
