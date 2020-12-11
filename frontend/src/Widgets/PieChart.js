@@ -1,19 +1,20 @@
 import React, { PureComponent } from 'react';
 import { PieChart, Pie, Sector } from 'recharts';
+import axios from 'axios';
 
-const data = [
-  { name: 'Sneaker', value: 400, fill: "#606060" },
-  { name: 'Sport', value: 200, fill: "#606060" },
-  { name: 'Ville', value: 300, fill: "#606060" },
-  { name: 'Bottines', value: 200, fill: "#606060" },
-  { name: 'Plage', value: 100, fill: "#606060" },
-];
+let totVentesSn=0;
+let totVentesSp=0;
+let totVentesP=0;
+let totVentesV=0;
+let totVentesB=0;
+
+let couleur = "#606060";
 
 const renderActiveShape = (props) => {
   const RADIAN = Math.PI / 180;
   const {
     cx, cy, midAngle, innerRadius, outerRadius, startAngle, endAngle,
-    fill=data.fill, payload, percent, value,
+    fill, payload, percent, value,
   } = props;
   const sin = Math.sin(-RADIAN * midAngle);
   const cos = Math.cos(-RADIAN * midAngle);
@@ -71,7 +72,51 @@ export default class Example extends PureComponent {
     });
   };
 
+  componentDidMount()
+ {
+   //Requetes
+    axios.get('http://localhost:3000/shoes/categorie/Sneakers')
+    .then(res => {
+      totVentesSn=res.data.length;
+      this.setState({totVentesSn})
+      })
+    
+
+    axios.get('http://localhost:3000/shoes/categorie/Sport')
+    .then(res => {
+      totVentesSp=res.data.length;
+      this.setState({totVentesSp})
+      })
+
+    axios.get('http://localhost:3000/shoes/categorie/Plage')
+    .then(res => {
+      totVentesP=res.data.length;
+      this.setState({totVentesP})
+      })
+    
+    axios.get('http://localhost:3000/shoes/categorie/Ville')
+    .then(res => {
+      totVentesV=res.data.length;
+      this.setState({totVentesV})
+      })
+    
+    axios.get('http://localhost:3000/shoes/categorie/Bottines')
+    .then(res => {
+      totVentesB=res.data.length;
+      this.setState({totVentesB})
+      })
+    
+  }
+
+
   render() {
+    const data = [
+      { name: 'Sneaker', value: totVentesSn},
+      { name: 'Sport', value: totVentesSp },
+      { name: 'Ville', value: totVentesV},
+      { name: 'Bottines', value: totVentesB },
+      { name: 'Plage', value: totVentesP},
+    ];
     return (
       <div>
         <PieChart width={400} height={300}>
@@ -83,7 +128,8 @@ export default class Example extends PureComponent {
             cy={150}//200
             innerRadius={60}
             outerRadius={80}
-            fill="#8884d8"
+            //fill="#8884d8"
+            fill="#606060"
             dataKey="value"
             onMouseEnter={this.onPieEnter}
           />
