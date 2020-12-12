@@ -48,10 +48,6 @@ let pourcBAsos=0;
 export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/dpgb3xjq/';
 
-  state = {
-    Test: 0,
-  };
-
   componentDidMount()
  {
     //Requetes
@@ -66,9 +62,9 @@ export default class Example extends PureComponent {
     axios.get('http://localhost:3000/shoes/categorie/Sneakers')
     .then(res => {
       totVentesSnJO=res.data.length;
-      pourcSn=(totVentesSnJO/totVentesSn)*100;
+      
 
-      this.setState({pourcSn})
+      this.setState({totVentesSnJO})
       
     })
     
@@ -110,6 +106,7 @@ export default class Example extends PureComponent {
   {
     //Sneakers
     totVentesSn=totVentesSnJO+totVentesSnAsos;
+    pourcSn=(totVentesSnJO/totVentesSn)*100;
     pourcSnAsos=(totVentesSnAsos/totVentesSn)*100;
 
     //Sport
@@ -142,19 +139,19 @@ export default class Example extends PureComponent {
       console.log("pourcSnAsos = "+pourcSnAsos);
     const data = [
       {
-        subject: 'Sneakers', Juscar: {pourcSn}, Asos: {pourcSnAsos}, fullMark: 100,
+        subject: 'Sneakers', Juscar: pourcSn, Asos: pourcSnAsos, fullMark: 100,
       },
       {
-        subject: 'Sport', Juscar: {pourcSp}, Asos: {pourcSpAsos}, fullMark: 100,
+        subject: 'Sport', Juscar: pourcSp, Asos: pourcSpAsos, fullMark: 100,
       },
       {
-        subject: 'Ville', Juscar: {pourcV}, Asos: {pourcVAsos}, fullMark: 100,
+        subject: 'Ville', Juscar: pourcV, Asos: pourcVAsos, fullMark: 100,
       },
       {
-        subject: 'Bottines', Juscar: {pourcB}, Asos: {pourcBAsos}, fullMark: 100,
+        subject: 'Bottines', Juscar: pourcB, Asos: pourcBAsos, fullMark: 100,
       },
       {
-        subject: 'Plage', Juscar: {pourcP}, Asos: {pourcPAsos}, fullMark: 100,
+        subject: 'Plage', Juscar: pourcP, Asos: pourcPAsos, fullMark: 100,
       },
     ];
 
