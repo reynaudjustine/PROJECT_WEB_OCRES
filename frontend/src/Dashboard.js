@@ -36,10 +36,10 @@ class Dashboard extends Component {
             <div className="Container" id="container" >
              
                 <div className="row" id="Gcontainer1">
-                    <div class=" col-sm-6 col-lg-4  " id="petit_container1"> 
+                    <div class=" col-12 col-md-6 col-lg-4  " id="petit_container1"> 
                         <div id="w1"><TestWidget/></div>
                     </div>
-                    <div class=" col-sm-6 col-lg-4 " id="petit_container2">
+                    <div class=" col-12 col-md-6 col-lg-4 " id="petit_container2">
                         {/* <BarChart/> */}
                         <div id="w2">
                         <Carousel indicators={false} >
@@ -76,18 +76,18 @@ class Dashboard extends Component {
         
                     
                     </div>
-                    <div class=" col-sm-6 col-lg-4 " id="petit_container3">
+                    <div class=" col-12 col-md-6 col-lg-4 " id="petit_container3">
                         <div id="w3"><Chiffres chiffre/></div>
                     </div>
 
 
-                    <div class=" col-sm-6 col-lg-4 " id="petit_container1"> 
+                    <div class=" col-12 col-md-6 col-lg-4 " id="petit_container1"> 
                         <div id="w1"><AreaChart/></div>
                     </div>
-                    <div class=" col-sm-6 col-lg-4" id="petit_container2">
+                    <div class=" col-12 col-md-6 col-lg-4" id="petit_container2">
                         <div id="w2"><RadarChart/></div>
                     </div>
-                    <div class=" col-sm-6 col-lg-4" id="petit_container3">
+                    <div class=" col-12 col-md-6 col-lg-4" id="petit_container3">
                         <div id="w3"><PieChart/></div>
                     </div>
 

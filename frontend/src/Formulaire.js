@@ -50,120 +50,124 @@ class Formulaire extends Component {
     render() {
         return (
         <div className="container_center2" id="section">
+            <br></br>
             <h1>Page Administrateur</h1>
             <br></br>
             <h3>Saisir les détails de la nouvelle vente</h3>
-            <br></br>
             <div id="Fleche">
                 <img src={fleche} height="100" id="arrow"/>
             </div>
- 
-            <form id="test_form" onSubmit={this.handleSubmit}>
-                <table id="table_test">
-                    <tr id="tr1">
-                        <td>Modèle :</td>
-                        <td><input type="text" name="modele" value ={this.state.modele} onChange={this.handleInputChange}></input></td>
-                    </tr>
-                    <tr  id="tr2">
-                        <td>Prix :</td>
-                        <td><input type="number" name="prix"></input></td>
-                    </tr>
-                    <tr  id="tr3">
-                        <td>Genre :</td>
-                        <td id="radio_left">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="homme" id="exampleRadios1" value={this.state.genre} onChange={this.handleInputChange}></input>
-                            <label class="form-check-label" for="exampleRadios1">
-                                Homme
-                            </label>
-                            </div>
+            
+            <div id="cadrant">
+                <form id="test_form" onSubmit={this.handleSubmit}>
+                    <table id="table_test">
+                        <tr id="tr1">
+                            <td>Modèle :</td>
+                            <td><input type="text" name="modele"  onChange={this.handleInputChange}></input></td>
+                        </tr>
+                        <tr  id="tr2">
+                            <td>Prix :</td>
+                            <td><input type="number" name="prix"  onChange={this.handleInputChange}></input></td>
+                        </tr>
+                        <tr  id="tr3">
+                            <td>Genre :</td>
+                            <td id="radio_left">
                             <div class="form-check">
-                            <input class="form-check-input" type="radio" name="femme" id="exampleRadios2" value={this.state.genre} onChange={this.handleInputChange}></input>
-                            <label class="form-check-label" for="exampleRadios2">
-                                Femme
-                            </label>
-                            </div>
-                            <div class="form-check">
-                            <input class="form-check-input" type="radio" name="mixte" id="exampleRadios3" value={this.state.genre} onChange={this.handleInputChange}></input>
-                            <label class="form-check-label" for="exampleRadios3">
-                                Mixte
-                            </label>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr id="tr4">         
-                        <td>Catégorie :</td>
-                        <td>
+                                <input class="form-check-input" type="radio" name="genre" id="exampleRadios1" value="homme" onChange={this.handleInputChange}></input>
+                                <label class="form-check-label" for="exampleRadios1">
+                                    Homme
+                                </label>
+                                </div>
+                                <div class="form-check">
+                                <input class="form-check-input" type="radio" name="genre" id="exampleRadios2" value="femme"onChange={this.handleInputChange}></input>
+                                <label class="form-check-label" for="exampleRadios2">
+                                    Femme
+                                </label>
+                                </div>
+                                <div class="form-check">
+                                <input class="form-check-input" type="radio" name="genre" id="exampleRadios3" value="mixte"onChange={this.handleInputChange}></input>
+                                <label class="form-check-label" for="exampleRadios3">
+                                    Mixte
+                                </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="tr4">         
+                            <td>Catégorie :</td>
+                            <td>
+                                <div class="form-group">
+                                    <select class="form-control" id="exampleFormControlSelect1" name="categorie" onChange={this.handleInputChange}>
+                                        <option>Sneakers</option>
+                                        <option>Sport</option>
+                                        <option>Ville</option>
+                                        <option>Bottines</option>
+                                        <option>Plage</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="tr5">
+                            <td>Marque :</td>
+                            <td><input type="text" id="message" name="marque" onChange={this.handleInputChange}></input></td>
+                        </tr>
+                        <tr id="tr6">
+                            <td>Pays de vente :</td>
+                            <td>
+                                <div class="form-group">
+                                    <select class="form-control" id="exampleFormControlSelect2" name="pdv" onChange={this.handleInputChange}>
+                                        <option>France</option>
+                                        <option>Italie</option>
+                                        <option>Allemagne</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="tr7">
+                            <td>Date :</td>
+                            <td>
                             <div class="form-group">
-                                <select class="form-control" id="exampleFormControlSelect1" value={this.state.categorie} onChange={this.handleInputChange}>
-                                    <option>Sneakers</option>
-                                    <option>Sport</option>
-                                    <option>Ville</option>
-                                    <option>Bottines</option>
-                                    <option>Plage</option>
+                                <select class="form-control" id="exampleFormControlSelect3" name="mdv" onChange={this.handleInputChange}>
+                                    <option>Janvier</option>
+                                    <option>Fevrier</option>
+                                    <option>Mars</option>
+                                    <option>Avril</option>
+                                    <option>Mai</option>
+                                    <option>Juin</option>
+                                    <option>Juillet</option>
+                                    <option>Aout</option>
+                                    <option>Septembre</option>
+                                    <option>Octobre</option>
+                                    <option>Novembre</option>
+                                    <option>Decembre</option>
                                 </select>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr id="tr5">
-                        <td>Marque :</td>
-                        <td><textarea id="message" name="marque" value={this.state.marque} onChange={this.handleInputChange}></textarea></td>
-                    </tr>
-                    <tr id="tr6">
-                        <td>Pays de vente :</td>
-                        <td>
-                            <div class="form-group">
-                                <select class="form-control" id="exampleFormControlSelect2" value={this.state.pdv} onChange={this.handleInputChange}>
-                                    <option>France</option>
-                                    <option>Italie</option>
-                                    <option>Allemagne</option>
-                                </select>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr id="tr7">
-                        <td>Date :</td>
-                        <td>
-                        <div class="form-group">
-                            <select class="form-control" id="exampleFormControlSelect3" value={this.state.mdv} onChange={this.handleInputChange}>
-                                <option>Janvier</option>
-                                <option>Fevrier</option>
-                                <option>Mars</option>
-                                <option>Avril</option>
-                                <option>Mai</option>
-                                <option>Juin</option>
-                                <option>Juillet</option>
-                                <option>Aout</option>
-                                <option>Septembre</option>
-                                <option>Octobre</option>
-                                <option>Novembre</option>
-                                <option>Decembre</option>
-                            </select>
-                            </div>
-                        </td>
-                    </tr>
-                <br></br>
-                    <tr>
-                        <td colspan="2" id="btn"><input type="submit" value="Valider"></input></td>
-                    </tr>
-                </table>
-            </form>
+                                </div>
+                            </td>
+                        </tr>
+                    <br></br>
+                        <tr>
+                            <td colspan="2" id="btn"><input type="submit" value="Valider"></input></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
 
             <br></br>
             <br></br>
             <br></br>
             <h3>Supprimer une vente</h3>
-            <form id="test_form">
-                <table id="table_test">
-                <tr id="tr1">
-                    <td>ID :</td>
-                    <td><input type="text" name="id"></input></td>
-                </tr>
-                <tr>
-                    <td colspan="2" id="btn"><input type="submit" value="Supprimer"></input></td>
-                </tr>
-                </table>
-            </form>
+            <div id="cadrant">
+                <form id="test_form">
+                    <table id="table_test">
+                    <tr id="tr1">
+                        <td>ID :</td>
+                        <td><input type="text" name="id"></input></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" id="btn"><input type="submit" value="Supprimer"></input></td>
+                    </tr>
+                    </table>
+                </form>
+            </div>
                         
         </div>
         
