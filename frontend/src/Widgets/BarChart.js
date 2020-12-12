@@ -299,7 +299,7 @@ export default class Example extends PureComponent {
         Marque: 'Puma', NB_Ventes: SnPuma,
       },
       {
-        Marque: 'Conver.', NB_Ventes: SnConv,
+        Marque: 'Conv.', NB_Ventes: SnConv,
       },
     ];
 
@@ -343,7 +343,7 @@ export default class Example extends PureComponent {
         Marque: 'Bexl.', NB_Ventes: VBex,
       },
       {
-        Marque: 'Grenson', NB_Ventes: VGren, 
+        Marque: 'Gren.', NB_Ventes: VGren, 
       },
       {
         Marque: 'Celio', NB_Ventes: VCel,
@@ -369,7 +369,7 @@ export default class Example extends PureComponent {
         Marque: 'Timb.', NB_Ventes: BTimb,
       },
       {
-        Marque: 'Minneli', NB_Ventes: BMin,
+        Marque: 'Minn.', NB_Ventes: BMin,
       },
     ];
     var datatest = [
