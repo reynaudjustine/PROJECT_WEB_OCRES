@@ -143,9 +143,9 @@ export default class Example extends PureComponent {
 
     return (
       <div>
-        <RadarChart cx={200} cy={170} outerRadius={150} width={400} height={350} data={data}>
+        <RadarChart cx={195} cy={175} outerRadius={150} width={400} height={350} data={data}>
           <PolarGrid />
-          <PolarAngleAxis dataKey="subject" />
+          <PolarAngleAxis dataKey="subject" fontSize={15}/>
           <PolarRadiusAxis angle={30} domain={[0, 100]} />
           <Radar name="Juscar" dataKey="Juscar" stroke="#E90570" fill="#E90570" fillOpacity={0.6} />
           <Radar name="Asos" dataKey="Asos" stroke="#696969" fill="#696969" fillOpacity={0.6} />
