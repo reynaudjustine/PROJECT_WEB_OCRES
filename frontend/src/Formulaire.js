@@ -4,6 +4,8 @@ import fleche from './fleche.png';
 import "./Formulaire.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import axios from 'axios';
+
 
 class Formulaire extends Component {
     constructor(props) {
@@ -44,6 +46,8 @@ class Formulaire extends Component {
         +'marque ='+ this.state.marque
         +'pdv ='+ this.state.pdv
         +'mdv ='+ this.state.mdv);
+        axios.post(`http://localhost:3000/shoes/${this.state.modele}/${this.state.prix}/${this.state.genre}/${this.state.categorie}/${this.state.marque}/${this.state.pdv}/:${this.state.mdv}`)
+        .then(res =>{})
         event.preventDefault();
       }
 

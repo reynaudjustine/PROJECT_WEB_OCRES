@@ -91,31 +91,33 @@ router.get("/pays/:pdv/:mdv", ShoesControl.getPaysMois);
 
 //Delete avec ID
 router.delete("/:id",ShoesControl.deleteOneShoe);
-//get chaussure en fonction de catégorie et marque
+
+//POST grave au form
+router.post("/:modele/:prix/:genre/:categorie/:marque/:pdv/:mdv", ShoesControl.PostOneShoe);
 
 
 //TENTATIVE de POST dans BDD
-router.post("/:modele/:prix/:genre/:categorie/:marque/:pdv/:mdv", (req,res)=>{
-	const modele = req.params.modele;
-	const prix = req.params.prix;
-	const genre = req.params.genre;
-	const categorie = req.params.categorie;
-	const marque = req.params.marque;
-	const pdv = req.params.pdv;
-	const mdv = req.params.mdv;
-	console.log(modele);
-	console.log(prix);
-	console.log(genre);
-	console.log(categorie);
-	console.log(marque);
-	console.log(pdv);
-	console.log(mdv);
-	shoesmodel.create({modele,prix,genre,categorie,marque,pdv,mdv},(err,shoe)=>
-	{
-		res.status(200).json(shoe);
-	});
+// router.post("/:modele/:prix/:genre/:categorie/:marque/:pdv/:mdv", (req,res)=>{
+// 	const modele = req.params.modele;
+// 	const prix = req.params.prix;
+// 	const genre = req.params.genre;
+// 	const categorie = req.params.categorie;
+// 	const marque = req.params.marque;
+// 	const pdv = req.params.pdv;
+// 	const mdv = req.params.mdv;
+// 	console.log(modele);
+// 	console.log(prix);
+// 	console.log(genre);
+// 	console.log(categorie);
+// 	console.log(marque);
+// 	console.log(pdv);
+// 	console.log(mdv);
+// 	shoesmodel.create({modele,prix,genre,categorie,marque,pdv,mdv},(err,shoe)=>
+// 	{
+// 		res.status(200).json(shoe);
+// 	});
 
-})
+// })
  
 // router.post('/', async(req, res) => {
 // 	const {name} = req.body;
