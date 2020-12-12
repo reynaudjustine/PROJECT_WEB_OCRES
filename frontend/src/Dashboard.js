@@ -37,50 +37,58 @@ class Dashboard extends Component {
              
                 <div className="row" id="Gcontainer1">
                     <div class=" col-sm-6 col-lg-4  " id="petit_container1"> 
-                        <TestWidget/>
+                        <div id="w1"><TestWidget/></div>
                     </div>
                     <div class=" col-sm-6 col-lg-4 " id="petit_container2">
                         {/* <BarChart/> */}
+                        <div id="w2">
                         <Carousel indicators={false} >
                             <Carousel.Item>
                                 <BarChart id="0"/>
+                                
                             </Carousel.Item>
 
                             <Carousel.Item>
                                 <BarChart id="1"/>
+                               
                             </Carousel.Item>
 
                             <Carousel.Item>
                                 <BarChart id="2"/>
+                                
                             </Carousel.Item>
 
                             <Carousel.Item>
                                 <BarChart id="3"/>
+                                
                             </Carousel.Item>
 
                             <Carousel.Item>
                                 <BarChart id="4"/>
+                                
                             </Carousel.Item>
 
-
+                            
                         </Carousel>
                         <p><strong>Nombre de ventes par catégorie/marques</strong></p>
+                        </div>
+                        
         
                     
                     </div>
                     <div class=" col-sm-6 col-lg-4 " id="petit_container3">
-                        <Chiffres chiffre/> 
+                        <div id="w3"><Chiffres chiffre/></div>
                     </div>
 
 
                     <div class=" col-sm-6 col-lg-4 " id="petit_container1"> 
-                        <AreaChart/>
+                        <div id="w1"><AreaChart/></div>
                     </div>
                     <div class=" col-sm-6 col-lg-4" id="petit_container2">
-                        <RadarChart/>
+                        <div id="w2"><RadarChart/></div>
                     </div>
                     <div class=" col-sm-6 col-lg-4" id="petit_container3">
-                        <PieChart/>
+                        <div id="w3"><PieChart/></div>
                     </div>
 
 

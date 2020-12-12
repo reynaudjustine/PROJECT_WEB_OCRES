@@ -50,20 +50,9 @@ export default class Example extends PureComponent {
 
   componentDidMount()
  {
-    //Requetes
-    /*axios.get('http://localhost:3000/shoes')
-    .then(res => {
-      totVentesJO=res.data.length;
-      this.setState({totVentesJO})
-    })
-    totVentes=totVentesJO+totVentesAsos;*/
-
-   
     axios.get('http://localhost:3000/shoes/categorie/Sneakers')
     .then(res => {
       totVentesSnJO=res.data.length;
-      
-
       this.setState({totVentesSnJO})
       
     })
@@ -130,13 +119,6 @@ export default class Example extends PureComponent {
     pourcB=(totVentesBJO/totVentesB)*100;
     pourcBAsos=(totVentesBAsos/totVentesB)*100;
     
-
-    console.log("TotVentesBJO = "+totVentesBJO);
-    console.log("TotVentesB = "+totVentesB);
-    console.log("pourcB = "+pourcB);
-
-    console.log("pourcSn = "+pourcSn);
-      console.log("pourcSnAsos = "+pourcSnAsos);
     const data = [
       {
         subject: 'Sneakers', Juscar: pourcSn, Asos: pourcSnAsos, fullMark: 100,

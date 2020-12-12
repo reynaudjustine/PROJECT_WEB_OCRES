@@ -204,7 +204,7 @@ export default class Example extends PureComponent {
       <div>
         <LineChart
           title = "Graphe"
-          width={400}
+          width={380}//400
           height={300}
           data={data}
           margin={{
