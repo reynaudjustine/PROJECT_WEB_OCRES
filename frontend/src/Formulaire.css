@@ -14,20 +14,30 @@
 .container_center2{
 	width: 100%;
 	float:left;
-    height: 50em;
+    height: 70em;
 	text-align: center;
 
 }
 
 .container_center2 h1{
     color: grey;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-bottom: 1%;
 }
+
+.container_center2 h3{
+    color: grey;
+}
+
 .container_center2 label{
     color: black;
 }
-#sous-titre{
-    color: grey;
-}
+
 
 #test_form{
     background-color: white;

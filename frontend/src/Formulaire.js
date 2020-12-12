@@ -10,8 +10,9 @@ class Formulaire extends Component {
     render() {
         return (
         <div className="container_center2" id="section">
-            <h1>Nouvelle Vente</h1>
-            <label id="sous-titre"><strong>Saisir les détails de la nouvelle vente</strong></label>
+            <h1>Page Administrateur</h1>
+            <br></br>
+            <h3>Saisir les détails de la nouvelle vente</h3>
             <br></br>
             <div id="Fleche">
                 <img src={fleche} height="100" id="arrow"/>
@@ -83,18 +84,44 @@ class Formulaire extends Component {
                     <tr id="tr7">
                         <td>Date :</td>
                         <td>
-                            <div class="form-group row">
-
-                                <div class="col-10">
-                                    <input class="form-control" type="date"></input>
-                                </div>
+                        <div class="form-group">
+                            <select class="form-control" id="exampleFormControlSelect3">
+                                <option>Janvier</option>
+                                <option>Fevrier</option>
+                                <option>Mars</option>
+                                <option>Avril</option>
+                                <option>Mai</option>
+                                <option>Juin</option>
+                                <option>Juillet</option>
+                                <option>Aout</option>
+                                <option>Septembre</option>
+                                <option>Octobre</option>
+                                <option>Novembre</option>
+                                <option>Decembre</option>
+                            </select>
                             </div>
                         </td>
                     </tr>
                 <br></br>
                     <tr>
-                        <td colspan="2" id="btn"><input type="submit" name="Valider"></input></td>
+                        <td colspan="2" id="btn"><input type="submit" value="Valider"></input></td>
                     </tr>
+                </table>
+            </form>
+
+            <br></br>
+            <br></br>
+            <br></br>
+            <h3>Supprimer une vente</h3>
+            <form id="test_form">
+                <table id="table_test">
+                <tr id="tr1">
+                    <td>ID :</td>
+                    <td><input type="text" name="id"></input></td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="btn"><input type="submit" value="Supprimer"></input></td>
+                </tr>
                 </table>
             </form>
                         

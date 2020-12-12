@@ -1,12 +1,19 @@
 #container_tab{
     text-align: center;
+    justify-content: center;
+    width: 100%;
 }
 
 #container_tab2{
+    display: flex;
+    justify-content: center;
     text-align: center;
+    margin-left: 4%;
+    width: 90%;
 }
 
 .table {
+    justify-content: center;
     margin-top: 0%;
     margin-left: 5%;
     width: 90%;

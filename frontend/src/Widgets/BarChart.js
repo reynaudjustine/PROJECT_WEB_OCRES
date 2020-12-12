@@ -415,8 +415,8 @@ export default class Example extends PureComponent {
       <div>
         {/* <h1>{this.state.id}</h1> */}
         <BarChart
-          width={380}
-          height={300}
+          width={360}//380
+          height={300}//300
          
           data={datatest}
           margin={{
@@ -431,6 +431,8 @@ export default class Example extends PureComponent {
           <Bar name="Nombre de ventes" dataKey="NB_Ventes" barSize={20} fill="#E90570" />
         </BarChart>
         <p>Catégorie : {categorie} </p>
+        
+        
         {/* <p><strong>Nombre de ventes par catégorie/marques</strong></p> */}
       </div>
     );
