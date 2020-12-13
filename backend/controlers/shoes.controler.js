@@ -116,4 +116,15 @@ const PostOneShoe=(req,res)=>{
 	});
 }
 
-module.exports = {getAllShoes, getOneShoe,getMarque,getModele,getPays,getMois, getGenre,getCategorie,getCatMar,getPaysMois,deleteOneShoe,PostOneShoe}
+const UpdateOneShoe=(req,res)=>{
+	const id = req.params.id;
+	const prix = req.params.prix;
+	console.log(id);
+ 	console.log(prix);
+	shoesmodel.findByIdAndUpdate(id,{prix},(err,shoe)=>
+	{
+		res.status(200).json(shoe);
+	})
+}
+
+module.exports = {getAllShoes, getOneShoe,getMarque,getModele,getPays,getMois, getGenre,getCategorie,getCatMar,getPaysMois,deleteOneShoe,PostOneShoe,UpdateOneShoe}
