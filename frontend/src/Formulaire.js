@@ -18,11 +18,13 @@ class Formulaire extends Component {
             marque:'',
             pdv:'',
             mdv:'',
+            id:"",
         };
     
         //this.handleChange = this.handleChange.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleSubmitSuppr = this.handleSubmitSuppr.bind(this);
       }
     //   handleChange(event) {
     //     this.setState({value: event.target.value});
@@ -46,8 +48,14 @@ class Formulaire extends Component {
         +'marque ='+ this.state.marque
         +'pdv ='+ this.state.pdv
         +'mdv ='+ this.state.mdv);
-        axios.post(`http://localhost:3000/shoes/${this.state.modele}/${this.state.prix}/${this.state.genre}/${this.state.categorie}/${this.state.marque}/${this.state.pdv}/:${this.state.mdv}`)
+        axios.post(`http://localhost:3000/shoes/${this.state.modele}/${this.state.prix}/${this.state.genre}/${this.state.categorie}/${this.state.marque}/${this.state.pdv}/${this.state.mdv}`)
         .then(res =>{})
+        event.preventDefault();
+      }
+      handleSubmitSuppr(event) {
+        alert('ID='+this.state.id);
+        axios.delete(`http://localhost:3000/shoes/${this.state.id}`)
+        .then(res=>{})
         event.preventDefault();
       }
 
@@ -67,29 +75,29 @@ class Formulaire extends Component {
                     <table id="table_test">
                         <tr id="tr1">
                             <td>Modèle :</td>
-                            <td><input type="text" name="modele"  onChange={this.handleInputChange}></input></td>
+                            <td><input type="text" name="modele"  onChange={this.handleInputChange} required></input></td>
                         </tr>
                         <tr  id="tr2">
                             <td>Prix :</td>
-                            <td><input type="number" name="prix"  onChange={this.handleInputChange}></input></td>
+                            <td><input type="number" name="prix"  onChange={this.handleInputChange} required></input></td>
                         </tr>
                         <tr  id="tr3">
                             <td>Genre :</td>
                             <td id="radio_left">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="genre" id="exampleRadios1" value="homme" onChange={this.handleInputChange}></input>
+                                <input class="form-check-input" type="radio" name="genre" id="exampleRadios1" value="homme" onChange={this.handleInputChange} required></input>
                                 <label class="form-check-label" for="exampleRadios1">
                                     Homme
                                 </label>
                                 </div>
                                 <div class="form-check">
-                                <input class="form-check-input" type="radio" name="genre" id="exampleRadios2" value="femme"onChange={this.handleInputChange}></input>
+                                <input class="form-check-input" type="radio" name="genre" id="exampleRadios2" value="femme"onChange={this.handleInputChange} required></input>
                                 <label class="form-check-label" for="exampleRadios2">
                                     Femme
                                 </label>
                                 </div>
                                 <div class="form-check">
-                                <input class="form-check-input" type="radio" name="genre" id="exampleRadios3" value="mixte"onChange={this.handleInputChange}></input>
+                                <input class="form-check-input" type="radio" name="genre" id="exampleRadios3" value="mixte"onChange={this.handleInputChange} required></input>
                                 <label class="form-check-label" for="exampleRadios3">
                                     Mixte
                                 </label>
@@ -100,7 +108,7 @@ class Formulaire extends Component {
                             <td>Catégorie :</td>
                             <td>
                                 <div class="form-group">
-                                    <select class="form-control" id="exampleFormControlSelect1" name="categorie" onChange={this.handleInputChange}>
+                                    <select class="form-control" id="exampleFormControlSelect1" name="categorie" onChange={this.handleInputChange} required>
                                         <option>Sneakers</option>
                                         <option>Sport</option>
                                         <option>Ville</option>
@@ -112,13 +120,13 @@ class Formulaire extends Component {
                         </tr>
                         <tr id="tr5">
                             <td>Marque :</td>
-                            <td><input type="text" id="message" name="marque" onChange={this.handleInputChange}></input></td>
+                            <td><input type="text" id="message" name="marque" onChange={this.handleInputChange} required></input></td>
                         </tr>
                         <tr id="tr6">
                             <td>Pays de vente :</td>
                             <td>
                                 <div class="form-group">
-                                    <select class="form-control" id="exampleFormControlSelect2" name="pdv" onChange={this.handleInputChange}>
+                                    <select class="form-control" id="exampleFormControlSelect2" name="pdv" onChange={this.handleInputChange} required>
                                         <option>France</option>
                                         <option>Italie</option>
                                         <option>Allemagne</option>
@@ -130,7 +138,7 @@ class Formulaire extends Component {
                             <td>Date :</td>
                             <td>
                             <div class="form-group">
-                                <select class="form-control" id="exampleFormControlSelect3" name="mdv" onChange={this.handleInputChange}>
+                                <select class="form-control" id="exampleFormControlSelect3" name="mdv" onChange={this.handleInputChange}required>
                                     <option>Janvier</option>
                                     <option>Fevrier</option>
                                     <option>Mars</option>
@@ -160,14 +168,14 @@ class Formulaire extends Component {
             <br></br>
             <h3>Supprimer une vente</h3>
             <div id="cadrant">
-                <form id="test_form">
+                <form id="test_form" onSubmit={this.handleSubmitSuppr} >
                     <table id="table_test">
                     <tr id="tr1">
                         <td>ID :</td>
-                        <td><input type="text" name="id"></input></td>
+                        <td><input type="text" name="id"  onChange={this.handleInputChange} required></input></td>
                     </tr>
                     <tr>
-                        <td colspan="2" id="btn"><input type="submit" value="Supprimer"></input></td>
+                        <td colspan="2" id="btn2"><input type="submit" value="Supprimer" x></input></td>
                     </tr>
                     </table>
                 </form>
