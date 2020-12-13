@@ -208,8 +208,8 @@ class Formulaire extends Component {
 
             <div className="row" id="containerRow">
 
-            <div class="col-md-12 col-lg-6 " id="petit_container1">
-                <div id="w1">
+            <div class="col-md-12 col-lg-6 " id="petit_container11">
+                <div id="w11">
                     <h3>Rechercher une vente</h3>
                     <form id="test_form" onSubmit={this.handleSubmitSearch} >
                         <table id="table_test">
@@ -225,36 +225,36 @@ class Formulaire extends Component {
                 </div>
             </div>
                 
-            <div class="col-md-12 col-lg-6 " id="petit_container2">
+            <div class="col-md-12 col-lg-6 " id="petit_container22">
                 <div id="w2">
                     <h3>Affichage de la vente recherchée</h3>
                     <form id="test_form">
                         <table className="table">
-                            <ul id="ul1">
+                            <ul id="ul11">
                                 <td><strong>Modèle : </strong></td>
                                 <td>€</td>
                             </ul>
-                            <ul id="ul2">
+                            <ul id="ul22">
                                 <td><strong>Prix : </strong></td>
                                 <td>Q</td>
                             </ul>
-                            <ul id="ul3">
+                            <ul id="ul33">
                                 <td><strong>Genre : </strong></td>
                                 <td>Q</td>
                             </ul>
-                            <ul id="ul4">
+                            <ul id="ul44">
                                 <td><strong>Catégorie : </strong></td>
                                 <td>Q</td>
                             </ul>
-                            <ul id="ul5">
+                            <ul id="ul55">
                                 <td><strong>Marque : </strong></td>
                                 <td>Q</td>
                             </ul>
-                            <ul id="ul6">
+                            <ul id="ul66">
                                 <td><strong>Pays de vente : </strong></td>
                                 <td>Q</td>
                             </ul>
-                            <ul id="ul7">
+                            <ul id="ul77">
                                 <td><strong>Date : </strong></td>
                                 <td>Q</td>
                             </ul>
@@ -263,8 +263,8 @@ class Formulaire extends Component {
                 </div>
             </div>
                 
-            <div class="col-md-12 col-lg-6 " id="petit_container1">
-                <div id="w1">
+            <div class="col-md-12 col-lg-6 " id="petit_container11">
+                <div id="w11">
                     <h3>Actualiser une vente : </h3>
                     <h3>Saisir l'ID puis le prix à modifier</h3>
                         <form id="test_form">
@@ -285,8 +285,8 @@ class Formulaire extends Component {
                 </div>
             </div>
             
-            <div class="col-md-12 col-lg-6 " id="petit_container2">
-                <div id="w2">
+            <div class="col-md-12 col-lg-6 " id="petit_container22">
+                <div id="w22">
                     <h3>Supprimer une vente</h3>
                     <form id="test_form" onSubmit={this.handleSubmitSuppr} >
                         <table id="table_test">

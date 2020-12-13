@@ -163,7 +163,7 @@ body {
 	-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.table #ul1
+.table #ul11
 {
     padding-left: 0.3em;
     margin: 0em 0em 0em 0em;
@@ -177,7 +177,7 @@ body {
     text-align: left;
 }
 
-.table #ul2
+.table #ul22
 {
     padding-left: 0.3em;
     margin: 0em 0em 0em 0em;
@@ -191,7 +191,7 @@ body {
     text-align: left;
 }
 
-.table #ul3
+.table #ul33
 {
     padding-left: 0.3em;
     margin: 0em 0em 0em 0em;
@@ -205,7 +205,7 @@ body {
     text-align: left;
 }
 
-.table #ul4
+.table #ul44
 {
     padding-left: 0.3em;
     margin: 0em 0em 0em 0em;
@@ -219,7 +219,7 @@ body {
     text-align: left;
 }
 
-.table #ul5
+.table #ul55
 {
     padding-left: 0.3em;
     margin: 0em 0em 0em 0em;
@@ -233,7 +233,7 @@ body {
     text-align: left;
 }
 
-.table #ul6
+.table #ul66
 {
     padding-left: 0.3em;
     margin: 0em 0em 0em 0em;
@@ -247,7 +247,7 @@ body {
     text-align: left;
 }
 
-.table #ul7
+.table #ul77
 {
     padding-left: 0.3em;
     margin: 0em 0em 0em 0em;
@@ -262,7 +262,7 @@ body {
 }
 
 
-#petit_container1{ 
+#petit_container11{ 
     display: inline-block;
     margin-top: 3%;
     padding-top: 3%; 
@@ -273,7 +273,7 @@ body {
   }
 
 
-  #petit_container2{
+  #petit_container22{
     display: inline-block;
     margin-top: 3%;
     padding-top: 3%;
@@ -283,7 +283,7 @@ body {
   }
 
 
-  #w1{
+  #w11{
     justify-content: center;
     padding-top: 5%;
     height: 100%; 
@@ -294,7 +294,7 @@ body {
   
   }
 
-  #w2{
+  #w22{
     justify-content: center;
     padding-top: 5%;
     height: 100%;
