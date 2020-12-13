@@ -6,6 +6,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import axios from 'axios';
 
+let modeleR="";
+let prixR=0;
+let genreR="";
+let categorieR="";
+let marqueR="";
+let pdvR="";
+let mdvR="";
+
+
 
 class Formulaire extends Component {
     constructor(props) {
@@ -19,16 +28,34 @@ class Formulaire extends Component {
             pdv:'',
             mdv:'',
             id:"",
+            
         };
     
         //this.handleChange = this.handleChange.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleSubmitSuppr = this.handleSubmitSuppr.bind(this);
+        this.handleSubmitSearch = this.handleSubmitSearch.bind(this);
+        this.handleSubmitUpdate = this.handleSubmitUpdate.bind(this);
       }
     //   handleChange(event) {
     //     this.setState({value: event.target.value});
     //   }
+    componentDidUpdate(){
+        axios.get(`http://localhost:3000/shoes/${this.state.id}`)
+        .then(res=>
+            {
+                modeleR = res.data.modele;
+                prixR=res.data.prix;
+                genreR=res.data.genre;
+                categorieR=res.data.categorie;
+                marqueR=res.data.marque;
+                pdvR=res.data.pdv;
+                mdvR=res.data.mdv;
+
+            })
+
+    }
     handleInputChange(event) {
         const target = event.target;
         //const value = target.type === 'checkbox' ? target.checked : target.value;
@@ -58,6 +85,20 @@ class Formulaire extends Component {
         .then(res=>{})
         event.preventDefault();
       }
+
+      handleSubmitSearch(event){
+        
+       
+            alert('ID='+this.state.id+"INFOS:"+modeleR+prixR+genreR+categorieR+marqueR+pdvR+mdvR);
+            event.preventDefault();
+
+      }
+
+      handleSubmitUpdate(event){
+
+    }
+
+
 
     render() {
         return (
@@ -168,11 +209,11 @@ class Formulaire extends Component {
             <br></br>
             <h3>Rechercher une vente</h3>
             <div id="cadrant">
-                <form id="test_form">
+                <form id="test_form" onSubmit={this.handleSubmitSearch}>
                     <table id="table_test">
                     <tr id="tr1">
                         <td>ID :</td>
-                        <td><input type="text" name="id"  ></input></td>
+                        <td><input type="text" name="id" onChange={this.handleInputChange} required ></input></td>
                     </tr>
                     <tr>
                         <td colspan="2" id="btn2"><input type="submit" value="Rechercher" x></input></td>
