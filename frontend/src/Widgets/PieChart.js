@@ -124,7 +124,7 @@ export default class Example extends PureComponent {
             activeIndex={this.state.activeIndex}
             activeShape={renderActiveShape}
             data={data}
-            cx={200}//200
+            cx={185}//200
             cy={150}//200
             innerRadius={60}
             outerRadius={80}
