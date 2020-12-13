@@ -139,7 +139,7 @@ export default class Example extends PureComponent {
 
     return (
       <div>
-        <RadarChart cx={195} cy={175} outerRadius={150} width={400} height={350} data={data}>
+        <RadarChart cx={214} cy={175} outerRadius={150} width={400} height={350} data={data}>
           <PolarGrid />
           <PolarAngleAxis dataKey="subject" fontSize={15}/>
           <PolarRadiusAxis angle={30} domain={[0, 100]} />

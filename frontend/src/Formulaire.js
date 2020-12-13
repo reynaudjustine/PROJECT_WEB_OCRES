@@ -3,6 +3,7 @@ import fleche from './fleche.png';
 
 import "./Formulaire.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import FormWidget from './Widgets/FormWidget'
 
 import axios from 'axios';
 
@@ -21,7 +22,7 @@ class Formulaire extends Component {
         super(props);
         this.state = {
             modele: '',
-            prix: 0,
+            prix: '',
             genre:'',
             categorie:'',
             marque:'',
@@ -41,21 +42,7 @@ class Formulaire extends Component {
     //   handleChange(event) {
     //     this.setState({value: event.target.value});
     //   }
-    componentDidUpdate(){
-        axios.get(`http://localhost:3000/shoes/${this.state.id}`)
-        .then(res=>
-            {
-                modeleR = res.data.modele;
-                prixR=res.data.prix;
-                genreR=res.data.genre;
-                categorieR=res.data.categorie;
-                marqueR=res.data.marque;
-                pdvR=res.data.pdv;
-                mdvR=res.data.mdv;
-
-            })
-
-    }
+    
     handleInputChange(event) {
         const target = event.target;
         //const value = target.type === 'checkbox' ? target.checked : target.value;
@@ -89,16 +76,19 @@ class Formulaire extends Component {
       handleSubmitSearch(event){
         
        
-            alert('ID='+this.state.id+"INFOS:"+modeleR+prixR+genreR+categorieR+marqueR+pdvR+mdvR);
+            // alert('ID='+this.state.id+"INFOS:"+modeleR+prixR+genreR+categorieR+marqueR+pdvR+mdvR);
+            this.setState({id:""});
             event.preventDefault();
 
       }
 
       handleSubmitUpdate(event){
+          alert(this.state.id+this.state.prix);
+          axios.put(`http://localhost:3000/shoes/${this.state.id}/${this.state.prix}`)
+          .then(res=>{})
+          event.preventDefault();
 
     }
-
-
 
     render() {
         return (
@@ -207,102 +197,73 @@ class Formulaire extends Component {
             <br></br>
             <br></br>
             <br></br>
-            <h3>Rechercher une vente</h3>
-            <div id="cadrant">
-                <form id="test_form" onSubmit={this.handleSubmitSearch}>
-                    <table id="table_test">
-                    <tr id="tr1">
-                        <td>ID :</td>
-                        <td><input type="text" name="id" onChange={this.handleInputChange} required ></input></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" id="btn2"><input type="submit" value="Rechercher" x></input></td>
-                    </tr>
-                    </table>
-                </form>
+
+            <div className="row" id="containerRow">
+
+            <div class="col-md-12 col-lg-6 " id="petit_container11">
+                <div id="w11">
+                    <h3>Rechercher une vente</h3>
+                    <form id="test_form" onSubmit={this.handleSubmitSearch} >
+                        <table id="table_test">
+                        <tr id="tr1">
+                            <td>ID :</td>
+                            <td><input type="text" name="id" onChange={this.handleInputChange} required  ></input>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" id="btn2"><input type="submit" value="Rechercher" x></input>
+                            <input type="reset" defaultValue="Reset" />  </td>
+                        </tr>
+                        </table>
+                    </form>
+                </div>
             </div>
-            <br></br>
-            <br></br>
-            <br></br>
-            <div id="cadrant">
-            <form id="test_form">
-                    <table className="table">
-                        <ul id="ul1">
-                            <td><strong>Modèle : </strong></td>
-                            <td>€</td>
-                        </ul>
-                        <ul id="ul2">
-                            <td><strong>Prix : </strong></td>
-                            <td>Q</td>
-                        </ul>
-                        <ul id="ul3">
-                            <td><strong>Genre : </strong></td>
-                            <td>Q</td>
-                        </ul>
-                        <ul id="ul4">
-                            <td><strong>Catégorie : </strong></td>
-                            <td>Q</td>
-                        </ul>
-                        <ul id="ul5">
-                            <td><strong>Marque : </strong></td>
-                            <td>Q</td>
-                        </ul>
-                        <ul id="ul6">
-                            <td><strong>Pays de vente : </strong></td>
-                            <td>Q</td>
-                        </ul>
-                        <ul id="ul7">
-                            <td><strong>Date : </strong></td>
-                            <td>Q</td>
-                        </ul>
-                    </table>
-                </form>
+                
+            <div class="col-md-12 col-lg-6 " id="petit_container22">
+                <FormWidget id ={this.state.id}></FormWidget>
             </div>
-
-            <br></br>
-            <br></br>
-            <br></br>
-            <h3>Actualiser une vente : saisir l'ID puis le prix à modifier</h3>
-            <div id="cadrant">
-                <form id="test_form">
-                    <table id="table_test">
-                    <tr id="tr1">
-                        <td>ID :</td>
-                        <td><input type="text" name="id"  ></input></td>
-                    </tr>
-                    <tr id="tr2">
-                        <td>Prix :</td>
-                        <td><input type="text" name="prix"></input></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" id="btn2"><input type="submit" value="Actualiser" x></input></td>
-                    </tr>
-                    </table>
-                </form>
+                
+            <div class="col-md-12 col-lg-6 " id="petit_container11">
+                <div id="w11">
+                    <h3>Actualiser une vente : </h3>
+                    <h3>Saisir l'ID puis le prix à modifier</h3>
+                        <form id="test_form" onSubmit={this.handleSubmitUpdate}>
+                            <table id="table_test">
+                            <tr id="tr1">
+                                <td>ID :</td>
+                                <td><input type="text" name="id" onChange={this.handleInputChange} required  ></input></td>
+                            </tr>
+                            <tr id="tr2">
+                                <td>Prix :</td>
+                                <td><input type="text" name="prix" onChange={this.handleInputChange} required></input></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" id="btn2"><input type="submit" value="Actualiser" x></input></td>
+                            </tr>
+                            </table>
+                        </form>
+                </div>
             </div>
-            <br></br>
-            <br></br>
-            <br></br>
-
-
-
-
-            <h3>Supprimer une vente</h3>
-            <div id="cadrant">
-                <form id="test_form" onSubmit={this.handleSubmitSuppr} >
-                    <table id="table_test">
-                    <tr id="tr1">
-                        <td>ID :</td>
-                        <td><input type="text" name="id"  onChange={this.handleInputChange} required></input></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" id="btn2"><input type="submit" value="Supprimer" x></input></td>
-                    </tr>
-                    </table>
-                </form>
+            
+            <div class="col-md-12 col-lg-6 " id="petit_container2">
+                <div id="w22">
+                    <h3>Supprimer une vente</h3>
+                    <form id="test_form" onSubmit={this.handleSubmitSuppr} >
+                        <table id="table_test">
+                        <tr id="tr1">
+                            <td>ID :</td>
+                            <td><input type="text" name="id"  onChange={this.handleInputChange} required></input></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" id="btn2"><input type="submit" value="Supprimer" x></input></td>
+                        </tr>
+                        </table>
+                    </form>
+                </div>
             </div> 
+            
         </div>
-        
+    </div>
 
         )
     }
