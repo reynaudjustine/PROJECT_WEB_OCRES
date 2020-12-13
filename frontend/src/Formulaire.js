@@ -166,6 +166,86 @@ class Formulaire extends Component {
             <br></br>
             <br></br>
             <br></br>
+            <h3>Rechercher une vente</h3>
+            <div id="cadrant">
+                <form id="test_form">
+                    <table id="table_test">
+                    <tr id="tr1">
+                        <td>ID :</td>
+                        <td><input type="text" name="id"  ></input></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" id="btn2"><input type="submit" value="Rechercher" x></input></td>
+                    </tr>
+                    </table>
+                </form>
+            </div>
+            <br></br>
+            <br></br>
+            <br></br>
+            <div id="cadrant">
+            <form id="test_form">
+                    <table className="table">
+                        <ul id="ul1">
+                            <td><strong>Modèle : </strong></td>
+                            <td>€</td>
+                        </ul>
+                        <ul id="ul2">
+                            <td><strong>Prix : </strong></td>
+                            <td>Q</td>
+                        </ul>
+                        <ul id="ul3">
+                            <td><strong>Genre : </strong></td>
+                            <td>Q</td>
+                        </ul>
+                        <ul id="ul4">
+                            <td><strong>Catégorie : </strong></td>
+                            <td>Q</td>
+                        </ul>
+                        <ul id="ul5">
+                            <td><strong>Marque : </strong></td>
+                            <td>Q</td>
+                        </ul>
+                        <ul id="ul6">
+                            <td><strong>Pays de vente : </strong></td>
+                            <td>Q</td>
+                        </ul>
+                        <ul id="ul7">
+                            <td><strong>Date : </strong></td>
+                            <td>Q</td>
+                        </ul>
+                    </table>
+                </form>
+            </div>
+
+            <br></br>
+            <br></br>
+            <br></br>
+            <h3>Actualiser une vente : saisir l'ID puis le prix à modifier</h3>
+            <div id="cadrant">
+                <form id="test_form">
+                    <table id="table_test">
+                    <tr id="tr1">
+                        <td>ID :</td>
+                        <td><input type="text" name="id"  ></input></td>
+                    </tr>
+                    <tr id="tr2">
+                        <td>Prix :</td>
+                        <td><input type="text" name="prix"></input></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" id="btn2"><input type="submit" value="Actualiser" x></input></td>
+                    </tr>
+                    </table>
+                </form>
+            </div>
+            <br></br>
+            <br></br>
+            <br></br>
+
+
+
+
             <h3>Supprimer une vente</h3>
             <div id="cadrant">
                 <form id="test_form" onSubmit={this.handleSubmitSuppr} >
@@ -179,8 +259,7 @@ class Formulaire extends Component {
                     </tr>
                     </table>
                 </form>
-            </div>
-                        
+            </div> 
         </div>
         
 

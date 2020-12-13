@@ -14,7 +14,7 @@
 .container_center2{
 	width: 100%;
 	float:left;
-    height: 90em;
+    height: 170em;
 	text-align: center;
 
 }
@@ -141,4 +141,104 @@ body {
 body {
     font-size: 0.6em;
     }
+}
+
+
+
+
+.table {
+    justify-content: center;
+    margin-top: 0%;
+    margin-left: 5%;
+    width: 90%;
+    height: 65%;
+    
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.table #ul1
+{
+    padding-left: 0.3em;
+    margin: 0em 0em 0em 0em;
+    display: flex;
+    width: 100%;
+    background-color: #E90570;
+    border-color: #E90570;
+    height: 3em;
+    text-align: left;
+}
+
+.table #ul2
+{
+    padding-left: 0.3em;
+    margin: 0em 0em 0em 0em;
+    display: flex;
+    width: 100%;
+    background-color: #484848;
+    border-color:  #484848;
+    height: 4em;
+    text-align: left;
+}
+
+.table #ul3
+{
+    padding-left: 0.3em;
+    margin: 0em 0em 0em 0em;
+    display: flex;
+    width: 100%;
+    background-color:#707070;
+    border-color:#707070;
+    height: 4em;
+    text-align: left;
+}
+
+.table #ul4
+{
+    padding-left: 0.3em;
+    margin: 0em 0em 0em 0em;
+    display: flex;
+    width: 100%;
+    background-color: #A0A0A0;
+    border-color:  #A0A0A0;
+    height: 4em;
+    text-align: left;
+}
+
+.table #ul5
+{
+    padding-left: 0.3em;
+    margin: 0em 0em 0em 0em;
+    display: flex;
+    width: 100%;
+    background-color: #C0C0C0;
+    border-color:  #C0C0C0;
+    height: 4em;
+    text-align: left;
+}
+
+.table #ul6
+{
+    padding-left: 0.3em;
+    margin: 0em 0em 0em 0em;
+    display: flex;
+    width: 100%;
+    background-color:#E8E8E8;
+    border-color: #E8E8E8;
+    height: 4em;
+    text-align: left;
+}
+
+.table #ul7
+{
+    padding-left: 0.3em;
+    margin: 0em 0em 0em 0em;
+    display: flex;
+    width: 100%;
+    background-color: whitesmoke;
+    border-color:  whitesmoke;
+    height: 4em;
+    text-align: left;
 }
