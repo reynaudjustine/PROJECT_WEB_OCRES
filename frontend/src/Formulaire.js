@@ -220,7 +220,41 @@ class Formulaire extends Component {
             </div>
                 
             <div class="col-md-12 col-lg-6 " id="petit_container22">
-                <FormWidget id ={this.state.id}></FormWidget>
+                <div id="w2">
+                    <h3>Affichage de la vente recherchée</h3>
+                    <form id="test_form">
+                        <table className="table">
+                            <ul id="ul11">
+                                <td><strong>Modèle : </strong></td>
+                                <td>€</td>
+                            </ul>
+                            <ul id="ul22">
+                                <td><strong>Prix : </strong></td>
+                                <td>Q</td>
+                            </ul>
+                            <ul id="ul33">
+                                <td><strong>Genre : </strong></td>
+                                <td>Q</td>
+                            </ul>
+                            <ul id="ul44">
+                                <td><strong>Catégorie : </strong></td>
+                                <td>Q</td>
+                            </ul>
+                            <ul id="ul55">
+                                <td><strong>Marque : </strong></td>
+                                <td>Q</td>
+                            </ul>
+                            <ul id="ul66">
+                                <td><strong>Pays de vente : </strong></td>
+                                <td>Q</td>
+                            </ul>
+                            <ul id="ul77">
+                                <td><strong>Date : </strong></td>
+                                <td>Q</td>
+                            </ul>
+                        </table>
+                    </form>
+                </div>
             </div>
                 
             <div class="col-md-12 col-lg-6 " id="petit_container11">
@@ -245,7 +279,7 @@ class Formulaire extends Component {
                 </div>
             </div>
             
-            <div class="col-md-12 col-lg-6 " id="petit_container2">
+            <div class="col-md-12 col-lg-6 " id="petit_container22">
                 <div id="w22">
                     <h3>Supprimer une vente</h3>
                     <form id="test_form" onSubmit={this.handleSubmitSuppr} >

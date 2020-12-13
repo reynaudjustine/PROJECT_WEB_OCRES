@@ -22,6 +22,11 @@ Notre objectif était de réaliser une dashboard simple, clair avec toutes les i
 
 # Documentation pour lancer le projet
 
+A partir de l'invite de commande :
+Installer recharts : npm install recharts
+Installer axios : npm install axios
+Installer node modules : npm install
+
 Pour lancer notre projet (frontend), il faut se placer dans le dossier frontend du projet avec l'invite de commande. Un fois dans le frontend, il faut taper 'npm start' et le projet se lancera.
 
 # Organisation du projet
