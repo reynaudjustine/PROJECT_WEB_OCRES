@@ -48,10 +48,6 @@ let pourcBAsos=0;
 export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/dpgb3xjq/';
 
-  state = {
-    Test: 0,
-  };
-
   componentDidMount()
  {
     axios.get('http://localhost:3000/shoes/categorie/Sneakers')

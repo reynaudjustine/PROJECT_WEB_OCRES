@@ -91,12 +91,60 @@ router.get("/pays/:pdv/:mdv", ShoesControl.getPaysMois);
 
 //Delete avec ID
 router.delete("/:id",ShoesControl.deleteOneShoe);
-//get chaussure en fonction de catégorie et marque
+
+//POST grave au form
+router.post("/:modele/:prix/:genre/:categorie/:marque/:pdv/:mdv", ShoesControl.PostOneShoe);
 
 
 //TENTATIVE de POST dans BDD
-router.post("/:")
+// router.post("/:modele/:prix/:genre/:categorie/:marque/:pdv/:mdv", (req,res)=>{
+// 	const modele = req.params.modele;
+// 	const prix = req.params.prix;
+// 	const genre = req.params.genre;
+// 	const categorie = req.params.categorie;
+// 	const marque = req.params.marque;
+// 	const pdv = req.params.pdv;
+// 	const mdv = req.params.mdv;
+// 	console.log(modele);
+// 	console.log(prix);
+// 	console.log(genre);
+// 	console.log(categorie);
+// 	console.log(marque);
+// 	console.log(pdv);
+// 	console.log(mdv);
+// 	shoesmodel.create({modele,prix,genre,categorie,marque,pdv,mdv},(err,shoe)=>
+// 	{
+// 		res.status(200).json(shoe);
+// 	});
+
+// })
  
+// router.post('/', async(req, res) => {
+// 	const {name} = req.body;
+	
+// 	await axios.get(`http://www.omdbapi.com/?t=${name}&apikey=34831a91`)
+// 		.then((response) => {
+
+// 			const data = response.data;
+// 			let info = {
+// 				id: movies.length,
+// 				movie: data.Title,
+// 				yearOfRelease: data.Year,
+// 				duration: data.Runtime,
+// 				actors: data.Actors.split(","),
+// 				poster: data.Poster,
+// 				//boxOffice: data.BoxOffice,
+// 				//rottenTomatoesScore: data.imbRating,
+// 				//rottenTomatoesScore: parseInt(data.Ratings[1].Value),
+// 			}
+
+// 			movies.push(info);
+// 			res.send(movies)
+// 		})
+// 		.catch(function (error){
+// 			res.send("Film introuvable !");
+// 		});
+// });
 
 /*GET one movie.*/
 /*

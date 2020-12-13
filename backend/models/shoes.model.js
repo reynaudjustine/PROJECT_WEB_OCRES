@@ -30,5 +30,5 @@ const shoes = new mongoose.Schema({
         required:true,
     }
 
-},{collection:"Shoes"})
+},{collection:"Shoes",versionKey:false})
 module.exports = mongoose.model('Shoe', shoes);

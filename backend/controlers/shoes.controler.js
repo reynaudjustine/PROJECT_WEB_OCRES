@@ -95,4 +95,25 @@ const deleteOneShoe =(req,res)=>{
 	});
 }
 
-module.exports = {getAllShoes, getOneShoe,getMarque,getModele,getPays,getMois, getGenre,getCategorie,getCatMar,getPaysMois,deleteOneShoe}
+const PostOneShoe=(req,res)=>{
+	const modele = req.params.modele;
+	const prix = req.params.prix;
+	const genre = req.params.genre;
+	const categorie = req.params.categorie;
+	const marque = req.params.marque;
+	const pdv = req.params.pdv;
+	const mdv = req.params.mdv;
+	console.log(modele);
+	console.log(prix);
+	console.log(genre);
+	console.log(categorie);
+	console.log(marque);
+	console.log(pdv);
+	console.log(mdv);
+	shoesmodel.create({modele,prix,genre,categorie,marque,pdv,mdv},(err,shoe)=>
+	{
+		res.status(200).json(shoe);
+	});
+}
+
+module.exports = {getAllShoes, getOneShoe,getMarque,getModele,getPays,getMois, getGenre,getCategorie,getCatMar,getPaysMois,deleteOneShoe,PostOneShoe}
