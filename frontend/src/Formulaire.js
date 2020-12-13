@@ -6,6 +6,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import axios from 'axios';
 
+let modeleR="";
+let prixR=0;
+let genreR="";
+let categorieR="";
+let marqueR="";
+let pdvR="";
+let mdvR="";
+
+
 
 class Formulaire extends Component {
     constructor(props) {
@@ -19,16 +28,34 @@ class Formulaire extends Component {
             pdv:'',
             mdv:'',
             id:"",
+            
         };
     
         //this.handleChange = this.handleChange.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleSubmitSuppr = this.handleSubmitSuppr.bind(this);
+        this.handleSubmitSearch = this.handleSubmitSearch.bind(this);
+        this.handleSubmitUpdate = this.handleSubmitUpdate.bind(this);
       }
     //   handleChange(event) {
     //     this.setState({value: event.target.value});
     //   }
+    componentDidUpdate(){
+        axios.get(`http://localhost:3000/shoes/${this.state.id}`)
+        .then(res=>
+            {
+                modeleR = res.data.modele;
+                prixR=res.data.prix;
+                genreR=res.data.genre;
+                categorieR=res.data.categorie;
+                marqueR=res.data.marque;
+                pdvR=res.data.pdv;
+                mdvR=res.data.mdv;
+
+            })
+
+    }
     handleInputChange(event) {
         const target = event.target;
         //const value = target.type === 'checkbox' ? target.checked : target.value;
@@ -58,6 +85,18 @@ class Formulaire extends Component {
         .then(res=>{})
         event.preventDefault();
       }
+
+      handleSubmitSearch(event){
+        
+       
+            alert('ID='+this.state.id+"INFOS:"+modeleR+prixR+genreR+categorieR+marqueR+pdvR+mdvR);
+            event.preventDefault();
+
+      }
+
+      handleSubmitUpdate(event){
+
+    }
 
     render() {
         return (
@@ -166,102 +205,105 @@ class Formulaire extends Component {
             <br></br>
             <br></br>
             <br></br>
-            <h3>Rechercher une vente</h3>
-            <div id="cadrant">
-                <form id="test_form">
-                    <table id="table_test">
-                    <tr id="tr1">
-                        <td>ID :</td>
-                        <td><input type="text" name="id"  ></input></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" id="btn2"><input type="submit" value="Rechercher" x></input></td>
-                    </tr>
-                    </table>
-                </form>
+
+            <div className="row" id="containerRow">
+
+            <div class="col-md-12 col-lg-6 " id="petit_container1">
+                <div id="w1">
+                    <h3>Rechercher une vente</h3>
+                    <form id="test_form" onSubmit={this.handleSubmitSearch} >
+                        <table id="table_test">
+                        <tr id="tr1">
+                            <td>ID :</td>
+                            <td><input type="text" name="id" onChange={this.handleInputChange} required  ></input></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" id="btn2"><input type="submit" value="Rechercher" x></input></td>
+                        </tr>
+                        </table>
+                    </form>
+                </div>
             </div>
-            <br></br>
-            <br></br>
-            <br></br>
-            <div id="cadrant">
-            <form id="test_form">
-                    <table className="table">
-                        <ul id="ul1">
-                            <td><strong>Modèle : </strong></td>
-                            <td>€</td>
-                        </ul>
-                        <ul id="ul2">
-                            <td><strong>Prix : </strong></td>
-                            <td>Q</td>
-                        </ul>
-                        <ul id="ul3">
-                            <td><strong>Genre : </strong></td>
-                            <td>Q</td>
-                        </ul>
-                        <ul id="ul4">
-                            <td><strong>Catégorie : </strong></td>
-                            <td>Q</td>
-                        </ul>
-                        <ul id="ul5">
-                            <td><strong>Marque : </strong></td>
-                            <td>Q</td>
-                        </ul>
-                        <ul id="ul6">
-                            <td><strong>Pays de vente : </strong></td>
-                            <td>Q</td>
-                        </ul>
-                        <ul id="ul7">
-                            <td><strong>Date : </strong></td>
-                            <td>Q</td>
-                        </ul>
-                    </table>
-                </form>
+                
+            <div class="col-md-12 col-lg-6 " id="petit_container2">
+                <div id="w2">
+                    <h3>Affichage de la vente recherchée</h3>
+                    <form id="test_form">
+                        <table className="table">
+                            <ul id="ul1">
+                                <td><strong>Modèle : </strong></td>
+                                <td>€</td>
+                            </ul>
+                            <ul id="ul2">
+                                <td><strong>Prix : </strong></td>
+                                <td>Q</td>
+                            </ul>
+                            <ul id="ul3">
+                                <td><strong>Genre : </strong></td>
+                                <td>Q</td>
+                            </ul>
+                            <ul id="ul4">
+                                <td><strong>Catégorie : </strong></td>
+                                <td>Q</td>
+                            </ul>
+                            <ul id="ul5">
+                                <td><strong>Marque : </strong></td>
+                                <td>Q</td>
+                            </ul>
+                            <ul id="ul6">
+                                <td><strong>Pays de vente : </strong></td>
+                                <td>Q</td>
+                            </ul>
+                            <ul id="ul7">
+                                <td><strong>Date : </strong></td>
+                                <td>Q</td>
+                            </ul>
+                        </table>
+                    </form>
+                </div>
             </div>
-
-            <br></br>
-            <br></br>
-            <br></br>
-            <h3>Actualiser une vente : saisir l'ID puis le prix à modifier</h3>
-            <div id="cadrant">
-                <form id="test_form">
-                    <table id="table_test">
-                    <tr id="tr1">
-                        <td>ID :</td>
-                        <td><input type="text" name="id"  ></input></td>
-                    </tr>
-                    <tr id="tr2">
-                        <td>Prix :</td>
-                        <td><input type="text" name="prix"></input></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" id="btn2"><input type="submit" value="Actualiser" x></input></td>
-                    </tr>
-                    </table>
-                </form>
+                
+            <div class="col-md-12 col-lg-6 " id="petit_container1">
+                <div id="w1">
+                    <h3>Actualiser une vente : </h3>
+                    <h3>Saisir l'ID puis le prix à modifier</h3>
+                        <form id="test_form">
+                            <table id="table_test">
+                            <tr id="tr1">
+                                <td>ID :</td>
+                                <td><input type="text" name="id"  ></input></td>
+                            </tr>
+                            <tr id="tr2">
+                                <td>Prix :</td>
+                                <td><input type="text" name="prix"></input></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" id="btn2"><input type="submit" value="Actualiser" x></input></td>
+                            </tr>
+                            </table>
+                        </form>
+                </div>
             </div>
-            <br></br>
-            <br></br>
-            <br></br>
-
-
-
-
-            <h3>Supprimer une vente</h3>
-            <div id="cadrant">
-                <form id="test_form" onSubmit={this.handleSubmitSuppr} >
-                    <table id="table_test">
-                    <tr id="tr1">
-                        <td>ID :</td>
-                        <td><input type="text" name="id"  onChange={this.handleInputChange} required></input></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" id="btn2"><input type="submit" value="Supprimer" x></input></td>
-                    </tr>
-                    </table>
-                </form>
+            
+            <div class="col-md-12 col-lg-6 " id="petit_container2">
+                <div id="w2">
+                    <h3>Supprimer une vente</h3>
+                    <form id="test_form" onSubmit={this.handleSubmitSuppr} >
+                        <table id="table_test">
+                        <tr id="tr1">
+                            <td>ID :</td>
+                            <td><input type="text" name="id"  onChange={this.handleInputChange} required></input></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" id="btn2"><input type="submit" value="Supprimer" x></input></td>
+                        </tr>
+                        </table>
+                    </form>
+                </div>
             </div> 
+            
         </div>
-        
+    </div>
 
         )
     }
