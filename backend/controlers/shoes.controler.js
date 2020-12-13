@@ -2,6 +2,9 @@ const shoesmodel = require("../models/shoes.model");
 
 const getAllShoes = (req,res) => {
     shoesmodel.find((err,shoe)=>{
+		if(err){
+			res.status(400).send(err);
+		}
         res.status(200).json(shoe);
     });
 }
@@ -10,7 +13,11 @@ const getOneShoe =(req,res) => {
     const id = req.params.id;
 	console.log(id);
 	shoesmodel.findById(id,(err,test)=>
-	{res.status(200).json(test);
+	{
+		if(err){
+			res.status(400).send(err);
+		}
+		res.status(200).json(test);
 	});
 }
 
@@ -19,6 +26,9 @@ const getMarque =(req,res)=>{
 		console.log(marque);
 		shoesmodel.find({marque},(err,shoe)=>
 		{
+			if(err){
+				res.status(400).send(err);
+			}
 			res.status(200).json(shoe);
 		});
 }
@@ -28,6 +38,9 @@ const getModele =(req,res)=>{
 	console.log(modele);
 	shoesmodel.find({modele},(err,shoe)=>
 	{
+		if(err){
+			res.status(400).send(err);
+		}
 		res.status(200).json(shoe);
 	});
 }
@@ -37,6 +50,9 @@ const getPays =(req,res)=>{
 	console.log(pdv);
 	shoesmodel.find({pdv},(err,shoe)=>
 	{
+		if(err){
+			res.status(400).send(err);
+		}
 		res.status(200).json(shoe);
 	});
 }
@@ -46,6 +62,9 @@ const getMois =(req,res)=>{
 	console.log(mdv);
 	shoesmodel.find({mdv},(err,shoe)=>
 	{
+		if(err){
+			res.status(400).send(err);
+		}
 		res.status(200).json(shoe);
 	});
 }
@@ -54,6 +73,9 @@ const getGenre =(req,res)=>{
 	console.log(genre);
 	shoesmodel.find({genre},(err,shoe)=>
 	{
+		if(err){
+			res.status(400).send(err);
+		}
 		res.status(200).json(shoe);
 	});
 }
@@ -63,6 +85,9 @@ const getCategorie =(req,res)=>{
 	console.log(categorie);
 	shoesmodel.find({categorie},(err,shoe)=>
 	{
+		if(err){
+			res.status(400).send(err);
+		}
 		res.status(200).json(shoe);
 	});
 }
@@ -73,7 +98,11 @@ const getCatMar = (req,res) =>{
 	 console.log(categorie);
 	 console.log(marque);
  	shoesmodel.find({categorie,marque},(err,test)=>
- 	{res.status(200).json(test);
+ 	{
+		if(err){
+			res.status(400).send(err);
+		}
+		 res.status(200).json(test);
  	});
 }
 
@@ -83,7 +112,11 @@ const getCatMar = (req,res) =>{
 	console.log(pdv);
 	console.log(mdv);
 	shoesmodel.find({pdv,mdv},(err,test)=>
-	{res.status(200).json(test);
+	{
+		if(err){
+			res.status(400).send(err);
+		}
+		res.status(200).json(test);
 	});
  }
 
@@ -91,7 +124,11 @@ const deleteOneShoe =(req,res)=>{
 	const id = req.params.id;
 	console.log(id);
 	shoesmodel.findByIdAndRemove(id,(err,test)=>
-	{res.status(200).json(test);
+	{
+		if(err){
+			res.status(400).send(err);
+		}
+		res.status(200).json(test);
 	});
 }
 
@@ -112,6 +149,9 @@ const PostOneShoe=(req,res)=>{
 	console.log(mdv);
 	shoesmodel.create({modele,prix,genre,categorie,marque,pdv,mdv},(err,shoe)=>
 	{
+		if(err){
+			res.status(400).send(err);
+		}
 		res.status(200).json(shoe);
 	});
 }
@@ -123,6 +163,9 @@ const UpdateOneShoe=(req,res)=>{
  	console.log(prix);
 	shoesmodel.findByIdAndUpdate(id,{prix},(err,shoe)=>
 	{
+		if(err){
+			res.status(400).send(err);
+		}
 		res.status(200).json(shoe);
 	})
 }
