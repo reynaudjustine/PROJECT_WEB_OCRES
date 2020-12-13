@@ -88,9 +88,9 @@ const getCatMar = (req,res) =>{
  }
 
 const deleteOneShoe =(req,res)=>{
-	var id = req.params.id;
+	const id = req.params.id;
 	console.log(id);
-	shoesmodel.findOneAndDelete(id,(err,test)=>
+	shoesmodel.findByIdAndRemove(id,(err,test)=>
 	{res.status(200).json(test);
 	});
 }

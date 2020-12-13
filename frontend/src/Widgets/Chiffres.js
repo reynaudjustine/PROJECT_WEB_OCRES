@@ -15,6 +15,7 @@ class Chiffres extends Component {
         axios.get('http://localhost:3000/shoes')
         .then(res => {
             Taille=res.data.length;
+            Recette=0;
             for(let i=0;i<Taille;i++)
             {
                 Recette=Recette+res.data[i].prix;
