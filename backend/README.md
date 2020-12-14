@@ -14,6 +14,8 @@ Pour lancer notre projet : ouvrir l'invite de commande, il faut se placer dans l
 
 Pour tester les recherches, la suppression et la modification il faut utiliser un ID que l'on peut trouver dans la BDD. Attention, la recherche avec un ID inexistant provoque une erreur.
 
+Pour l'ajout grâce au formulaire, il faut s'assurer de selectionner un items du menu déroulant car notre code détecte les changements et non l'items selectionné de base.Pour un bon fonctionnement de l'ajout, il faut modifier au moins une fois le choix dans le menu déroulant.
+
 # Source utilisée
 http://blog.kadri-hamza.com/manipulation-et-recuperation-des-donnees-dun-formulaire-en-react/
 https://fr.reactjs.org/docs/handling-events.html

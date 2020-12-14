@@ -32,20 +32,17 @@ class Formulaire extends Component {
             
         };
     
-        //this.handleChange = this.handleChange.bind(this);
+        
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleSubmitSuppr = this.handleSubmitSuppr.bind(this);
         this.handleSubmitSearch = this.handleSubmitSearch.bind(this);
         this.handleSubmitUpdate = this.handleSubmitUpdate.bind(this);
       }
-    //   handleChange(event) {
-    //     this.setState({value: event.target.value});
-    //   }
+    
     
     handleInputChange(event) {
         const target = event.target;
-        //const value = target.type === 'checkbox' ? target.checked : target.value;
         const value = target.value;
         const name = target.name;
     
@@ -76,7 +73,6 @@ class Formulaire extends Component {
       handleSubmitSearch(event){
         
        
-            // alert('ID='+this.state.id+"INFOS:"+modeleR+prixR+genreR+categorieR+marqueR+pdvR+mdvR);
             this.setState({id:""});
             event.preventDefault();
 
