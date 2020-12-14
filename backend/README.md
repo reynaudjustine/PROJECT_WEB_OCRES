@@ -12,6 +12,8 @@ Pour lancer notre projet : ouvrir l'invite de commande, il faut se placer dans l
 - Puis aller dans backend et le lancer : npm start
 - Puis ouvrir une autre fenetre et cette fois-ci aller dans le frontent : npm start puis cliquer "y"
 
+Pour tester les recherches, la suppression et la modification il faut utiliser un ID que l'on peut trouver dans la BDD. Attention, la recherche avec un ID inexistant provoque une erreur.
+
 # Source utilisée
 http://blog.kadri-hamza.com/manipulation-et-recuperation-des-donnees-dun-formulaire-en-react/
 https://fr.reactjs.org/docs/handling-events.html
