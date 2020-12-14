@@ -14,6 +14,9 @@ const getOneShoe =(req,res) => {
 	console.log(id);
 	shoesmodel.findById(id,(err,test)=>
 	{
+		if(!id){
+			res.status(500).send(err)
+		}
 		if(err){
 			res.status(400).send(err);
 		}

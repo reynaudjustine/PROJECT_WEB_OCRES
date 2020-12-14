@@ -55,19 +55,19 @@ class Formulaire extends Component {
       }
     
       handleSubmit(event) {
-        alert('Le Form a été soumis voici les données: modele= ' + this.state.modele
-        +'prix ='+ this.state.prix
-        +'genre ='+ this.state.genre
-        +'categorie ='+ this.state.categorie
-        +'marque ='+ this.state.marque
-        +'pdv ='+ this.state.pdv
-        +'mdv ='+ this.state.mdv);
+        alert("Voici les données de la vente que vous venez d'ajouter. Modele = "  + this.state.modele
+        +' prix = '+ this.state.prix
+        +' genre = '+ this.state.genre
+        +' categorie = '+ this.state.categorie
+        +' marque = '+ this.state.marque
+        +' pdv = '+ this.state.pdv
+        +' mdv = '+ this.state.mdv);
         axios.post(`http://localhost:3000/shoes/${this.state.modele}/${this.state.prix}/${this.state.genre}/${this.state.categorie}/${this.state.marque}/${this.state.pdv}/${this.state.mdv}`)
         .then(res =>{})
         event.preventDefault();
       }
       handleSubmitSuppr(event) {
-        alert('ID='+this.state.id);
+        alert('Vous avez supprimé la vente '+this.state.id);
         axios.delete(`http://localhost:3000/shoes/${this.state.id}`)
         .then(res=>{})
         event.preventDefault();
@@ -83,7 +83,7 @@ class Formulaire extends Component {
       }
 
       handleSubmitUpdate(event){
-          alert(this.state.id+this.state.prix);
+          alert("Vous avez modifié la vente "+this.state.id+" avec le prix "+this.state.prix);
           axios.put(`http://localhost:3000/shoes/${this.state.id}/${this.state.prix}`)
           .then(res=>{})
           event.preventDefault();
